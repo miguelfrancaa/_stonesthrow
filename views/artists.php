@@ -7,9 +7,9 @@
 		<meta name="keywords" content="STONES THROW">
 		<link rel="icon" href="img/logost.ico">
 		<meta name="description" content="stones throw, records, hiphop, music, alternative, quasimoto, mfdoom, underground, label">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<style type="text/css">
 			<?php
 				foreach ($artists as $artist) {
@@ -37,7 +37,7 @@
 	<main>
 		<ul class="artistsList">
 <?php foreach ($artists as $artist) {
-				echo'<li class="artists fundo '.strtolower(trim(str_replace(" ", "", $artist["name"]))).'"><a href="artistdetails.php?artist_id='.$artist["artist_id"].'">'.$artist["name"].'</a></li><br><br><br><br><br><br>';
+				echo'<li class="artists fundo '.strtolower(trim(str_replace(" ", "", $artist["name"]))).'"><a href="artist/'.$artist["artist_id"].'">'.$artist["name"].'</a></li><br><br><br><br><br><br>';
 			};
 ?>
 		</ul>

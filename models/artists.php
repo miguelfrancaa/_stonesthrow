@@ -27,5 +27,19 @@
 
 		return $query->fetchAll();
 		}
+
+	public function getArtistsDetails($id) {
+		$query = $this->db->prepare("
+		SELECT name, description, description_photo
+		FROM artists
+		WHERE artist_id = ?
+		");
+
+		$query->execute([
+			$id
+		]);
+
+		return $query->fetch();
+		}
 }
 ?>
