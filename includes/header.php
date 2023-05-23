@@ -2,14 +2,14 @@
 		<div class="container header">
 			<div class="row">
 				<div class="col-md-5 col-xs-12 col-sm-12">
-					<a href="index.php"><div class="logo"><img src="../img/logost.png"></div></a>
+					<a href="../home"><div class="logo"><img src="../img/logost.png"></div></a>
 				</div>
 				<nav class="col-md-7 menus disappear">
-					<a href="index2.php"><div class="col-md-2 pags">ARTISTS</div></a>
-					<a href="index3.php"><div class="col-md-2 pags">SHOP</div></a>
-					<a href="news"><div class="col-md-2 pags">NEWS</div></a>
-					<a href="index4.php"><div class="col-md-2 pags">EVENTS</div></a>
-					<a href="index5.php"><div class="col-md-2 pags">VIDEOS</div></a>
+					<a href="/artists"><div class="col-md-2 pags">ARTISTS</div></a>
+					<a href="/index3.php"><div class="col-md-2 pags">SHOP</div></a>
+					<a href="/news"><div class="col-md-2 pags">NEWS</div></a>
+					<a href="/index4.php"><div class="col-md-2 pags">EVENTS</div></a>
+					<a href="/index5.php"><div class="col-md-2 pags">VIDEOS</div></a>
 					<div class="col-md-2 pags">
 						<a href="login.php"><div class="col-md-6 fa fa-user" style="
 <?php

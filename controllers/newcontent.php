@@ -2,8 +2,7 @@
 
 	if(!isset($id) || !is_numeric($id)) {
 		http_response_code(400);
-		include('400.php');
-		die();
+		die("Request Invalido");
 	}
 
 	require("models/news.php");
@@ -14,8 +13,7 @@
 
 	if(empty($news)) {
 		http_response_code(404);
-		include('404.php');
-		die();
+		die("Request Invalido");
 	}
 
 	require("views/newcontent.php");

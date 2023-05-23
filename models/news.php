@@ -1,10 +1,7 @@
 <?php
-	class News{
-		public $db;
+	require_once("base.php");
 
-		public function __construct() {
-			$this->db = new PDO("mysql:host=".ENV["DB_HOST"].";dbname=".ENV["DB_NAME"].";charset=utf8mb4", ENV["DB_USER"], ENV["DB_PASSWORD"]);
-		}
+	class News extends Base{
 
 		public function getNewsHome() {
 			$query = $this->db->prepare("
