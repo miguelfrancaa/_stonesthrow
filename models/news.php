@@ -18,5 +18,17 @@
 
 			return $query->fetchAll();
 		}
+
+		public function getALLNews(){
+			$query = $this->db->prepare("
+			SELECT new_id, title, content, image, created_at
+			FROM news
+			ORDER BY created_at ASC
+			");
+
+			$query->execute();
+
+			return $query->fetchAll();
+		}
 	}
 ?>
