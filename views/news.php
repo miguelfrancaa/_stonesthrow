@@ -21,7 +21,7 @@
 			foreach ($news as $new) {
 				echo '
 					<div class="row newsMenu">
-				<a href="new.php?new_id='.$new["new_id"].'">
+				<a href="/newcontent/'.$new["new_id"].'">
 				<div class="col-md-4">
 					<div class="imgNew" style="background-image: url(img/news/'.$new["image"].');"></div>
 				</div>

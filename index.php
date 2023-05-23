@@ -9,6 +9,10 @@
 		$controller = $url_parts[1];
 	}
 
+	if(!empty($url_parts[2])) {
+		$id = $url_parts[2];
+	}
+
 	require("controllers/" . $controller . ".php");
 	
 ?>

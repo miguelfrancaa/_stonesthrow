@@ -2,7 +2,7 @@
 		<div class="container header">
 			<div class="row">
 				<div class="col-md-5 col-xs-12 col-sm-12">
-					<a href="index.php"><div class="logo"><img src="img/logost.png"></div></a>
+					<a href="index.php"><div class="logo"><img src="../img/logost.png"></div></a>
 				</div>
 				<nav class="col-md-7 menus disappear">
 					<a href="index2.php"><div class="col-md-2 pags">ARTISTS</div></a>
