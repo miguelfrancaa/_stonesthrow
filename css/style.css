@@ -1,0 +1,992 @@
+@font-face {
+  font-family: NeueHaas;
+  src: url('../fonts/neuehaas/NeueHaasDisplayRoman.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: NeueHaas;
+  src: url('../fonts/neuehaas/NeueHaasDisplayMediu.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: NeueHaas;
+  src: url('../fonts/neuehaas/NeueHaasDisplayBold.ttf');
+  font-weight: 800;
+}
+
+
+*{box-sizing: border-box;}
+html,body{padding: 0px;margin: 0px;}
+img{max-width: 100%;}
+
+body{
+	font-family: NeueHaas;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	list-style: none;
+}
+
+.artists{
+	text-align: center;
+	font-size: 200px;
+}
+
+.artists{
+	text-align: center;
+	font-size: 200px;
+	color: #FE5724;
+}
+
+.artistTitle{
+	color: #FE5724;
+	font-size: 60px;
+}
+
+.artists a{
+	color: black;
+}
+
+.artists a{
+	color: black;
+}
+
+.artists a:hover{
+	text-decoration: none;
+}
+
+.artistsList{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -3%);
+	width: 100%;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+@keyframes artists{
+	from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.header{
+	width: 95%;
+	padding-top: 30px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.logo{
+	width: 150px;
+}
+
+.menus{
+	padding-top: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.fa:hover{
+	color: #FE5724;
+}
+
+.hamb{
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	width: 28px;
+	height: 28px;
+	z-index: 4;
+}
+
+.xis{
+	position: absolute;
+	right: 15px;
+	top: 40px;
+	width: 36px;
+	height: 360px;
+	z-index: 4;
+}
+
+.menusxis{
+	width: 95%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.menuxis{
+	font-size: 30px;
+	line-height: 50px;
+}
+
+.bar{
+	width: 100%;
+	height: 5px;
+	background-color: #FE5724;
+	position: absolute;
+	border-radius: 25px;
+}
+
+.barx{
+	width: 100%;
+	height: 5px;
+	background-color: #FE5724;
+	position: absolute;
+	border-radius: 25px;
+}
+
+.bar1{
+top: 0px;
+}
+
+.bar2{
+top: 50%;
+transform: translateY(-50%);
+}
+
+.bar3{
+bottom: 0px;
+}
+
+.bar4{
+	transform: rotate(45deg);
+}
+
+.bar5{
+	transform: rotate(-45deg);
+}
+
+.popup{
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 100vh;
+	position: fixed;
+	background-color: white;
+	z-index: 2;
+}
+
+.pags:hover{
+	color: #FE5724;
+	cursor: pointer;
+}
+
+.newBack{
+	height: 100vh;
+	 -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: center;
+}
+
+.newText{
+	position: absolute;
+	padding-left: 100px;
+	width: 50%;
+}
+
+.newText11{
+	width: 80%;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.newText11 h2{
+	color: #FE5724;
+	opacity: 1;
+	text-align: center;
+	padding: 10px 20px;
+	font-size: 40px;
+}
+
+.barra{
+	position: absolute;
+	font-size: 18px;
+	z-index: 1;
+	font-weight: 400;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(254, 87, 36, 0.7);
+	padding-left: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 40px;
+	display: none;
+	color: white;
+	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+	border-radius: 5px;
+	border: none;
+}
+
+.barra a{
+	color: white;
+}
+
+
+
+
+.newTitle{
+	font-size: 40px;
+}
+
+.newBig{
+ 	display: none;
+ 	color: #FE5724;
+ 	font-size: 17px;
+}
+
+.newTitle:hover{
+	cursor: pointer;
+	color: #FE5724;
+}
+
+.textNew{
+	margin-top: 25px;
+	font-size: 19px;
+	font-weight: 100;
+}
+
+.titleNew{
+	font-size: 60px;
+}
+
+.dateNew{
+font-size: 15px;
+font-weight: 100;
+}
+
+.dateNewMenu{
+	font-size: 20px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.imgNew{
+	background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center; 
+	height: 230px;
+}
+
+.newsMenu{
+	margin-top: 120px;
+}
+
+.newsMenuText{
+	position: relative;
+	height: 230px;
+}
+
+.titleNewsText{
+	font-weight: 100;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.newsMenu:hover{
+	filter: blur(0.7px);
+}
+
+.newTitle:hover + .newBig {
+		cursor: pointer;
+    display: block;
+}
+
+.readMore{
+	margin-top: -3px;
+}
+
+.readMore a{
+	color: #FE5724;
+}
+
+.newTitle1{
+
+}
+
+.newContent1{
+	font-weight: 100;
+	font-size: 15px;
+}
+
+.secondText{
+
+}
+
+.imgNewDesc{
+	height: 70vh;
+	 -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: center;
+  	margin-bottom: 40px;
+}
+
+
+
+.arrows{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) scale(0.6);
+}
+
+.arrows:hover{
+	transform: translateY(-50%) scale(0.8);
+}
+
+.arrowleft{
+	left: 30px;
+}
+
+.arrowright{
+	right: 30px;
+}
+
+.noAbsolute{
+	padding-top: 250px;
+}
+
+
+.noAbsoluteNews{
+	padding-top: 130px;
+}
+
+.textEsq{
+	margin-left: -60px;
+	font-size: 19px;
+	font-weight: 100;
+}
+
+.textDir{
+	margin-right: -60px;
+	z-index: 1;
+	font-size: 19px;
+	font-weight: 100;
+}
+
+.imgDir{
+	margin-top: -50px;
+	z-index: -8;
+}
+
+.shopCat{
+	width: 100%;
+	height: 100vh;
+	margin-left: 0px;
+}
+
+.shopCat2{
+	top: 50%;
+	transform: translateY(-50%);
+	height: 100vh;
+}
+
+.name{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 100px;
+	font-weight: 800;
+	color: black;
+}
+
+.name:hover{
+	color: #FE5724;
+}
+
+.musicCat{
+	font-weight: 500;
+	font-size: 50px;
+}
+
+.musicCats{
+	line-height: 80px;
+}
+
+.musicCat:hover{
+		color: #FE5724;
+		text-decoration: none;
+}
+
+.vin{
+	height: 360px;
+}
+
+.rela{
+	position: relative;
+	height: 350px;
+	margin-bottom: 150px;
+}
+
+.relaa{
+	position: relative;
+	height: 350px;
+	margin-bottom: 90px;
+}
+
+.vinylText{
+	font-weight: 100;
+}
+
+.vinylText h2{
+font-weight: 800;
+margin-top: 0px;
+font-size: 32px;
+}
+
+.vinylText h3{
+	margin-top: 0px;
+	font-weight: 100;
+	color: #FE5724;
+	font-size: 17px;
+}
+
+.vinylText h4{
+	margin-top: 0px;
+	font-weight: 100;
+	font-size: 11px;
+}
+
+.price{
+	color: black;
+	background-color: white;
+	border: black 1px solid;
+	height: 40px;
+	width: 70px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin-left: 15px;
+}
+
+.price:hover{
+	border: white;
+	color: white;
+	background-color: #FE5724;
+}
+
+.pricepd{
+	position: relative;
+	color: black;
+	background-color: white;
+	border: black 1px solid;
+	height: 40px;
+	width: 70px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+.cen{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pricepd:hover{
+	border: white;
+	color: white;
+	background-color: #FE5724;
+}
+
+.evento{
+	text-align: center;
+	left: 50%;
+}
+
+.noAbsolute2{
+	padding-top: 200px;
+	color: black;
+}
+
+.evento{
+	font-weight: 500;
+}
+
+.events{
+	font-size: 60px;
+	line-height: 70px;
+}
+
+.eventDetails{
+	color: black;
+	background-color: white;
+	border: black 1px solid;
+	padding: 12px 22px;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+.eventDetails:hover{
+	border: white 1px solid;
+	color: white;
+	background-color: #FE5724;
+}
+
+.space{
+	margin-bottom: 100px;
+}
+
+.artista{
+	color: #FE5724;
+}
+
+.newVideo{
+	margin-bottom: 100px;
+	position: relative;
+}
+
+.videoYoutube{
+	width: 100%;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.videoYoutube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.videoTitle{
+	font-weight: 400;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.aberto{
+	display: none;
+}
+
+.fechado{
+	display: block;
+}
+
+.appear{
+	display: none;
+}
+
+.forms{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+.formTitle{
+	color:  #FE5724;
+	font-size: 35px;
+}
+
+.logForms{
+	background-color: transparent;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+}
+
+.logFormsLogin{
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+}
+
+.formLabels{
+	font-size: 13px;
+	font-weight: 100;
+	transition: .25s ease;
+	position: absolute;
+	z-index: 0;
+	margin-top: 20px;
+}
+
+.formInputs{
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid darkgrey;
+	padding: 2px 0px;
+	z-index: 1;
+	position: relative;
+	background-color: transparent;
+}
+
+.formInputs:focus {
+   outline: 0;
+   border-bottom: 2px solid black;
+}
+
+.upForm{
+	margin-top: 0px;
+}
+
+.buttonForm button{
+	color: white;
+	background-color: #FE5724;
+	border: none;
+	padding: 10px 20px;
+	font-weight: 100;
+}
+
+.buttonForm a{
+		padding: 10px 20px;
+		font-weight: 100;
+		margin-left: 20px;
+}
+
+.containerCart{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+.cartTable{
+	width: 100%;
+}
+
+
+.cartTable tr td{
+	border-bottom: 0.5px #FE5724 solid;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.lineProduct th{
+	height: 200px;
+}
+
+.lineProduct td{
+	font-weight: 400;
+	color: grey;
+}
+
+.lineBase th{
+	font-weight: 100;
+	color: grey;
+}
+
+.buttonsMenu{
+	margin-top: 20px;
+}
+
+.cartTable tr:last-child td{
+	border-bottom: none;
+}
+
+.buttonsMenu{
+	float: right;
+}
+
+.buttonsMenu button{
+	padding: 10px 30px;
+}
+
+.checkout{
+	color: white;
+	background-color: #FE5724;
+	border: none;
+}
+
+.checkout a{
+	color: white;
+}
+
+.update{
+	border: none;
+	background-color: white;
+	font-size: 10px;
+	font-weight: 100;
+}
+
+.update:hover{
+	color: #FE5724;
+}
+
+.ref{
+	margin-left: 10px;
+}
+
+.maismenos{
+	border: none;
+	background-color: white;
+}
+
+.footer{
+	background-color: #212121;
+	color: whitesmoke;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.footLogo{
+	filter: invert(0.8);
+	height: 100px;
+}
+
+.footMenu a li{
+	padding-bottom: 20px;
+	color: whitesmoke;
+	font-weight: 100;
+}
+
+.contacts{
+	font-weight: 100;
+}
+
+.contacts li{
+	padding-bottom: 20px;
+}
+
+.contacts a{
+	color: whitesmoke;
+}
+
+.error{
+	color: #FE5724;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	font-weight: 800;
+	font-size: 50px;
+	text-align: center;
+}
+
+.err{
+	max-height: 100vh;
+}
+
+.rel{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.imgError{
+	position: absolute;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: center;
+  opacity: 0.5;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.productDescription{
+	font-weight: 100;
+	font-size: 20px;
+}
+
+.tracklist{
+	font-weight: 100;
+	font-size: 15px;
+}
+
+
+
+/* <= 1440 HD Ready */
+@media screen and (max-width:1440px){}
+@media screen and (max-width:1200px){
+	.textEsq{
+		font-size: 15px;
+	}
+
+	.textDir{
+		font-size: 15px;
+		z-index: -2;
+	}
+}
+/* <= 1280 HD */
+@media screen and (max-width:1280px){}
+/* <= 1024 iPad Landscape */
+@media screen and (max-width:1024px){}
+/* <= 998 Bootstrap MD */
+@media screen and (max-width:992px){
+	.disappear{
+		display: none;
+	}
+
+	.artists{
+	font-size: 150px;
+}
+
+.shopCat2{
+	height: 40vh;
+}
+
+.name{
+	font-size: 90px;
+}
+
+.appear{
+	display: block;
+}
+
+.textEsq{
+	margin-left: 0px;
+	font-size: 19px;
+	font-weight: 100;
+		margin-top: 20px;
+}
+
+.textDir{
+	margin-right: 0px;
+	font-size: 19px;
+	font-weight: 100;
+}
+
+.imgDir{
+	margin-top: 20px;
+	z-index: -8;
+}
+
+.relaa{
+	height: 370px;
+	margin-bottom: 90px;
+}
+
+.dateNewMenu{
+	position: static;
+}
+
+.price{
+	top: 190px;
+}
+
+.relaa{
+	height: 290px;
+}
+}
+/* <= 768 iPad Portrait */
+@media screen and (max-width:768px){
+		.artists{
+	font-size: 100px;
+}
+
+.name{
+	font-size: 80px;
+}
+
+.artistsList{
+	top: 45%;
+}
+
+.events{
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.vin{
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+
+}
+/* <= 667 iPhone Landscape */
+@media screen and (max-width:667px){
+	.artists{
+	font-size: 70px;
+}
+
+.name{
+	font-size: 70px;
+}
+
+.logo{
+	width: 120px;
+}
+
+.vin{
+	height: 200px;
+}
+
+
+
+/* <= 414 iPhone Plus Portrait */
+@media screen and (max-width:414px){
+	.artists{
+	font-size: 60px;
+}
+
+.name{
+	font-size: 60px;
+}
+
+.artistsList{
+	top: 40%;
+}
+
+.events{
+	font-size: 40px;
+	line-height: 50px;
+}
+
+.textnew{
+	font-size: 15px;
+}
+
+
+}
+/* <= 375 iPhone Portrait */
+@media screen and (max-width:375px){
+	.artists{
+	font-size: 50px;
+}
+
+.name{
+	font-size: 50px;
+}
+
+}
+/* <= 320 iPhone 4 ao 5S Portrait */
+@media screen and (max-width:320px){
+	.artists{
+	font-size: 40px;
+}
+
+.name{
+	font-size: 40px;
+}
+
+
+}
