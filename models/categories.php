@@ -12,7 +12,7 @@
 
 			$query->execute([]);
 
-			return = $query->fetchAll();
+			return $query->fetchAll();
 		}
 	}
 ?>
