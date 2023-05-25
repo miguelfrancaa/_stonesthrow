@@ -8,8 +8,8 @@
 					<a href="/artists"><div class="col-md-2 pags">ARTISTS</div></a>
 					<a href="/shop"><div class="col-md-2 pags">SHOP</div></a>
 					<a href="/news"><div class="col-md-2 pags">NEWS</div></a>
-					<a href="/index4.php"><div class="col-md-2 pags">EVENTS</div></a>
-					<a href="/index5.php"><div class="col-md-2 pags">VIDEOS</div></a>
+					<a href="/events"><div class="col-md-2 pags">EVENTS</div></a>
+					<a href="/videos"><div class="col-md-2 pags">VIDEOS</div></a>
 					<div class="col-md-2 pags">
 						<a href="login.php"><div class="col-md-6 fa fa-user" style="
 <?php
