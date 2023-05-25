@@ -6,7 +6,7 @@
 				</div>
 				<nav class="col-md-7 menus disappear">
 					<a href="/artists"><div class="col-md-2 pags">ARTISTS</div></a>
-					<a href="/index3.php"><div class="col-md-2 pags">SHOP</div></a>
+					<a href="/shop"><div class="col-md-2 pags">SHOP</div></a>
 					<a href="/news"><div class="col-md-2 pags">NEWS</div></a>
 					<a href="/index4.php"><div class="col-md-2 pags">EVENTS</div></a>
 					<a href="/index5.php"><div class="col-md-2 pags">VIDEOS</div></a>

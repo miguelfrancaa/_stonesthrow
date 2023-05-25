@@ -14,5 +14,29 @@
 
 			return $query->fetchAll();
 		}
+
+		public function getCategoryId(){
+			$query = $this->db->prepare("
+			SELECT *
+			FROM categories
+			");
+
+			$query->execute([]);
+
+			return $query->fetchAll();
+			}
+
+
+		public function getSubcategories($id){
+			$query = $this->db->prepare("
+			SELECT *
+			FROM categories
+			WHERE parent_id = ?
+			");
+
+			$query->execute([$id]);
+
+			return $query->fetchAll();
+		}
 	}
 ?>

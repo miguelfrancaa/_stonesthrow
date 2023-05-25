@@ -13,6 +13,7 @@
 		$id = $url_parts[2];
 	}
 
+
 	require("controllers/" . $controller . ".php");
 	
 ?>

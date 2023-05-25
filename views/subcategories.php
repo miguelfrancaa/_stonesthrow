@@ -17,13 +17,18 @@
 	<main>
 		<div class="container">
 			<div class="row shopCat">
+				<div class="col-md-6 col-sm-12 col-xs-12 shopCat2 disappear">
+					<a href="music.html"><h2 class="name"><?= $categories[$id-1]["name"] ?></h2></a>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12 shopCat2">
+					<a href="merch.html"><h2 class="name musicCats">
 <?php
-	foreach($categories as $category) {
-		echo "<div class='col-md-6 col-sm-12 col-xs-12 shopCat2'>
-					<a href=/subcategories/".$category["category_id"]."><h2 class='name'>".$category["name"]."</h2></a>
-					</div>";
-	}
+					foreach ($subcategories as $subcategory) {
+						echo "<a href='products.php?subcategory_id=".$subcategory["category_id"]."' class='musicCat'>".$subcategory["name"]."</a><br>";
+					}
 ?>
+					</h2></a>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -31,7 +36,6 @@
 	<?php
 	require("includes/footer.php");
 	?>
-
 
 
 	<script src="js/jquery-3.6.0.min.js"></script>
