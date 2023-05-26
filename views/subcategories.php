@@ -24,7 +24,7 @@
 					<a href="merch.html"><h2 class="name musicCats">
 <?php
 					foreach ($subcategories as $subcategory) {
-						echo "<a href='products.php?subcategory_id=".$subcategory["category_id"]."' class='musicCat'>".$subcategory["name"]."</a><br>";
+						echo "<a href='/products/".$subcategory["category_id"]."' class='musicCat'>".$subcategory["name"]."</a><br>";
 					}
 ?>
 					</h2></a>

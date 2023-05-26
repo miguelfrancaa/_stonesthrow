@@ -19,7 +19,7 @@
 			<?php
 				foreach($events as $event){
 					echo "<div class='row evento space'>
-						<span class='events'><a href='artists/".$event["artist_id"]."'><span class='artista'>".$event["name"]."</span></a><br> 
+						<span class='events'><a href='artist/".$event["artist_id"]."'><span class='artista'>".$event["name"]."</span></a><br> 
 						
 						".date("d F Y",strtotime($event["event_date"]))."<br>
 						".$event["mode"]."<br>
