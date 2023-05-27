@@ -32,4 +32,22 @@
 
 			return $query->fetch();
 		}
+
+		public function getProductsCart($data){
+			$query = $this->db->prepare("
+			SELECT products.product_id, products.stock, products.item, products.price, products.type, products.image, artists.name
+			FROM products
+			LEFT JOIN artists USING (artist_id)
+			WHERE product_id = ?
+				AND stock >= ?
+
+			");
+
+		$query->execute([
+			$data["product_id"],
+			$data["quantity"]
+		]);
+
+		return $query->fetch();
+		}
 	};
