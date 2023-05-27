@@ -18,7 +18,7 @@
 		<div class="container noAbsolute">
 <?php
 	foreach ($products as $product) {
-		echo "<a href='productdetails.php?product_id=".$product["product_id"]."'><div class='row rela'>
+		echo "<a href='/productdetails/".$product["product_id"]."'><div class='row rela'>
 				<div class='col-md-7 col-sm-12 col-xs-12'><img class='vin john' src='/img/products/".$product["image"]."'></div>
 				<div class='col-md-5 col-sm-12 col-xs-12 vinylText relaa'>
 					<h2>".$product["item"]."<br>
