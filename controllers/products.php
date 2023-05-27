@@ -12,10 +12,5 @@
 
 	$products = $model->getProducts($id);
 
-	if(empty($products)) {
-		http_response_code(404);
-		header("Location: /404");
-		die();
-	}
 
 	require("views/products.php");

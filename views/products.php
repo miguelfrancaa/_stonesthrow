@@ -17,6 +17,8 @@
 	<main>
 		<div class="container noAbsolute">
 <?php
+	if (!empty($products)) {
+
 	foreach ($products as $product) {
 		echo "<a href='/productdetails/".$product["product_id"]."'><div class='row rela'>
 				<div class='col-md-7 col-sm-12 col-xs-12'><img class='vin john' src='/img/products/".$product["image"]."'></div>
@@ -29,6 +31,8 @@
 						<button class='price price1'>$".$product["price"]."</button>
 				</div>
 			</div></a>";
+	}}else{
+		echo "Ainda n";
 	}
 ?>
 			</div>

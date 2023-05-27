@@ -1,3 +1,7 @@
+<?php
+	echo $product["category_id"];
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -103,8 +107,16 @@ span.spinner > .add:hover {
 					<div class="vinylText"><?= $product["name"] ?></div></h2><br>
 					<div style="font-size: 17px; color: #FE5724;"><?= $product["type"] ?></div><br><br>
 					<div class="productDescription"><?= nl2br($product["description"]) ?></div><br><br>
+<?php
+	if (intval($product["category_id"]) === 3 || 
+		intval($product["category_id"]) === 4 || 
+		intval($product["category_id"]) === 5 || 
+		intval($product["category_id"]) === 6) {
+?>
 					<div class="tracklist"><span style="font-weight: 400;">Tracklist:</span><br><br><?= nl2br($product["tracklist"]) ?></div>
-
+<?php
+}
+?>
 				</div>
 			</div>
 		</div>
