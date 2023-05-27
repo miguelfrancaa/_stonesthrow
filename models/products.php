@@ -19,9 +19,10 @@
 
 		public function getProductDetails($id){
 			$query = $this->db->prepare("
-			SELECT products.product_id, products.category_id, products.item, products.type, products.description, products.image, products.image2, products.price, products.tracklist, products.stock, artists.name, artists.artist_id
+			SELECT products.product_id, products.category_id, products.item, products.type, products.description, products.image, products.image2, products.price, products.tracklist, products.stock, artists.name, artists.artist_id, categories.parent_id
 			FROM products
 			LEFT JOIN artists USING (artist_id)
+			INNER JOIN categories USING (category_id)
 			WHERE product_id = ?
 			");
 

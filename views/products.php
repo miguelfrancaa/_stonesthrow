@@ -45,9 +45,9 @@
 
 
 
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="/js/jquery-3.6.0.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/script.js"></script>
 	<script type="text/javascript">
 
 <?php
@@ -56,7 +56,7 @@
 
 			let characters".$product["product_id"]." = $('#productDescription".$product["product_id"]."').text().length;
 
-			if(characters".$product["product_id"]." < 414){
+			if(characters".$product["product_id"]." < 10000){
 				$('.readMore".$product["product_id"]."').css('display', 'none');
 			}
 

@@ -1,7 +1,3 @@
-<?php
-	echo $product["category_id"];
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -87,7 +83,7 @@ span.spinner > .add:hover {
 			<div class="row">
 				<div class="col-md-4 col-sm-12 col-xs-12">
 					<img src="/img/products/<?= $product["image"] ?>">
-					<form method="post" action="cart.php">
+					<form method="post" action="/cart/">
 						<div class='pricepd'><div class="cen">$<?= $product["price"] ?></div></div><br><br>
 							<input type="hidden" name="product_id" value="<?= $product["product_id"] ?>">
 <?php
@@ -108,10 +104,7 @@ span.spinner > .add:hover {
 					<div style="font-size: 17px; color: #FE5724;"><?= $product["type"] ?></div><br><br>
 					<div class="productDescription"><?= nl2br($product["description"]) ?></div><br><br>
 <?php
-	if (intval($product["category_id"]) === 3 || 
-		intval($product["category_id"]) === 4 || 
-		intval($product["category_id"]) === 5 || 
-		intval($product["category_id"]) === 6) {
+	if (intval($product["parent_id"]) === 1) {
 ?>
 					<div class="tracklist"><span style="font-weight: 400;">Tracklist:</span><br><br><?= nl2br($product["tracklist"]) ?></div>
 <?php
