@@ -17,5 +17,9 @@
 			return $query->fetch();
 		}
 
+		public function createUser($data){
+
+		}
+
 	}
 ?>
