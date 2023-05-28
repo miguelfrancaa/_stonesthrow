@@ -43,13 +43,13 @@
 			</div>
 			<div class="menusxis">
 				<nav>
-					<a class="menuxis" href="index2.php">ARTISTS</a><br>
-					<a class="menuxis" href="index3.php">SHOP</a><br>
-					<a class="menuxis" href="index6.php">NEWS</a><br>
-					<a class="menuxis" href="index4.php">EVENTS</a><br>
-					<a class="menuxis" href="index5.php">VIDEOS</a><br>
-					<a class="menuxis" href="login.php">ACCOUNT</a><br>
-					<a class="menuxis" href="cart.php">CART</a>
+					<a class="menuxis" href="/artists/">ARTISTS</a><br>
+					<a class="menuxis" href="/shop/">SHOP</a><br>
+					<a class="menuxis" href="/news/">NEWS</a><br>
+					<a class="menuxis" href="/events/">EVENTS</a><br>
+					<a class="menuxis" href="/videos/">VIDEOS</a><br>
+					<a class="menuxis" href="/login/">ACCOUNT</a><br>
+					<a class="menuxis" href="/cart/">CART</a>
 				</nav>
 			</div>
 		</div>
