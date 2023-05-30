@@ -25,6 +25,13 @@
 			<input class="formInputs formInput2" type="password" name="password" minlength="8" maxlength="500" required><br><br><br>
 			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>
 		</form>
+		<div> <?php
+
+		 if(isset($_POST["send"])){
+		 	echo $mess;
+		 }
+
+		?></div>
 		</div>
 		</div>
 	</main>

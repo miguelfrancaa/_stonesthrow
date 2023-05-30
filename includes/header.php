@@ -11,7 +11,7 @@
 					<a href="/events"><div class="col-md-2 pags">EVENTS</div></a>
 					<a href="/videos"><div class="col-md-2 pags">VIDEOS</div></a>
 					<div class="col-md-2 pags">
-						<a href="login.php"><div class="col-md-6 fa fa-user" style="
+						<a href="/login/"><div class="col-md-6 fa fa-user" style="
 <?php
 	if (!empty($_SESSION["user_id"])) {
 		echo'color: #FE5724';
