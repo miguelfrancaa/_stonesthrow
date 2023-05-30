@@ -18,7 +18,7 @@
 	}
 ?>
 						"></div></a>
-						<a href="cart.php"><div class="col-md-6 fa fa-shopping-cart" style="
+						<a href="/cart/"><div class="col-md-6 fa fa-shopping-cart" style="
 <?php
 	if (!empty($_SESSION["cart"])) {
 		echo'color: #FE5724 ';
