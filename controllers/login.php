@@ -1,9 +1,5 @@
 <?php
 
-if(isset($_SESSION["user_id"])){
-		echo "ja esta logado";
-	}
-
 	if(isset($_POST["send"])){
 
 		if (
@@ -41,6 +37,8 @@ if(isset($_SESSION["user_id"])){
 						http_response_code(401);
 						$mess = "Username ou password incorreto";
 						break;
+						header("Location: /login/");
+
 					}
 					}
 		

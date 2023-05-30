@@ -1,3 +1,14 @@
+<?php
+
+	$categoriesids = array();
+
+	foreach($categories as $id){
+		$categoriesids[] = $id["category_id"];
+	}
+
+	print_r($categoriesids);
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>

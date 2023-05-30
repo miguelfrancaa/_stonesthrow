@@ -17,7 +17,7 @@
 ?>
 
 	<main>
-		<button class="barra appear"><a href="news.php">ALL NEWS +</a></button>
+		<button class="barra appear"><a href="/news/">ALL NEWS +</a></button>
 		<!-- Carousel container -->
 <div id="my-pics" class="carousel slide ab" data-ride="carousel" style="width:100%;">
 
@@ -33,7 +33,7 @@
 		<h2 class="newTitle">
 			<a href="
 <?php
-					echo'new.php?new_id='.$news[0]["new_id"].''
+					echo'newcontent/'.$news[0]["new_id"].''
 ?>
 			"><?= $news[0]["title"] ?>
 			</a>
@@ -57,7 +57,7 @@
 		<h2 class="newTitle">
 		<a href="
 <?php
-					echo'new.php?new_id='.$news[1]["new_id"].''
+					echo'newcontent/'.$news[1]["new_id"].''
 ?>
 			"><?= $news[1]["title"] ?>
 			</a>
@@ -76,7 +76,7 @@
 		<h2 class="newTitle">
 			<a href="
 <?php
-					echo'new.php?new_id='.$news[2]["new_id"].''
+					echo'newcontent/'.$news[2]["new_id"].''
 ?>
 			"><?= $news[2]["title"] ?>
 			</a>
@@ -95,7 +95,7 @@
 		<h2 class="newTitle">
 			<a href="
 <?php
-					echo'new.php?new_id='.$news[3]["new_id"].''
+					echo'newcontent/'.$news[3]["new_id"].''
 ?>
 			"><?= $news[3]["title"] ?>
 			</a>

@@ -21,12 +21,12 @@
 		<div class="forms">
 		<div class="logFormsLogin">
 		<h1 class="formTitle">LOGIN</h1><br>
-		<form method="post" action="login.php">
+		<form method="post" action="/login/">
 			<label class="formLabels formLabel1" for="username">USERNAME</label><br>
 			<input class="formInputs formInput1" type="text" name="username" minlength="4" maxlength="32" required><br><br><br>
 			<label class="formLabels formLabel2" for="password">PASSWORD</label><br>
 			<input class="formInputs formInput2" type="password" name="password" minlength="8" maxlength="500" required><br><br><br>
-			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="register.php">CREATE ACCOUNT</a></div>
+			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>
 			<div><?php
 
 			if(isset($_POST["send"])){

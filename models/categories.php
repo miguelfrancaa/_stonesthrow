@@ -38,5 +38,16 @@
 
 			return $query->fetchAll();
 		}
+
+		public function getCategoriesIds(){
+			$query = $this->db->prepare("
+			SELECT category_id
+			FROM categories
+			");
+
+			$query->execute();
+
+			return $query->fetchAll();
+		}
 	}
 ?>
