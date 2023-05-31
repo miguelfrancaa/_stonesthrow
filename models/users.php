@@ -28,5 +28,18 @@
 			return $query->fetch();
 		}
 
+		public function getUserCheckout($user_id){
+			$query = $this->db->prepare("
+				SELECT email, username, address, city, postal_code, country
+				FROM users
+				WHERE user_id = ?
+				");
+
+			$query->execute([
+				$user_id
+			]);
+
+			return $query->fetch();
+		}
 	}
 ?>
