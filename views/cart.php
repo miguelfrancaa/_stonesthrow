@@ -140,9 +140,12 @@
 				<td>$<?= $total ?></td>
 			</tr>
 		</table>
+		<form>
 		<div class="buttonsMenu">
 		<button class="update" type="button"><a href="/cart/">UPDATE CART</a><div class="fa fa-refresh ref"></button>
 		<button class="checkout" type="submit"><a href="/checkout/">CHECKOUT</a></div></button>
+		<input type="hidden" name="email" value="<?= $_SESSION["email"] =>">
+		</form>
 		</div>
 		</div>
 <?php
