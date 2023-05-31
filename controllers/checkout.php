@@ -35,7 +35,7 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                      //Enable verbose debug output
+    $mail->SMTPDebug = 0;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = ''.ENV["MAIL_HOST"].'';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -52,7 +52,14 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'STONES THROW - #'.order_id.'';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Body    = 'Hello <b>'.$user["username"].'</b>! <br> Thanks for your order. Here are the information to the payment:<br>
+    Please check too if your information is correct.<br>
+    Name: <b>'.$user["name"].'</b><br>
+    Country: <b>'.$user["country"].'</b><br>
+    Address: <b>'.$user["address"].'</b><br>
+    Postal-Code: <b>'.$user["postal_code"].'</b><br>
+    City: <b>'.$user["city"].'</b>
+      ';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

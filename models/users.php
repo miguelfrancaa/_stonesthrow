@@ -30,7 +30,7 @@
 
 		public function getUserCheckout($user_id){
 			$query = $this->db->prepare("
-				SELECT email, username, address, city, postal_code, country
+				SELECT email, username, address, city, postal_code, country, name
 				FROM users
 				WHERE user_id = ?
 				");
