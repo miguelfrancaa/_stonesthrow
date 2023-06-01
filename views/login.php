@@ -25,6 +25,7 @@
 		<div class="logFormsLogin">
 		<h1 class="formTitle">LOGIN</h1><br>
 		<form method="post" action="/login/">
+			<input type="hidden" name="csrf_token" value="<?= $_SESSION["csrf_token"]?>">
 			<label class="formLabels formLabel1" for="username">USERNAME</label><br>
 			<input class="formInputs formInput1" type="text" name="username" minlength="4" maxlength="32" required><br><br><br>
 			<label class="formLabels formLabel2" for="password">PASSWORD</label><br>

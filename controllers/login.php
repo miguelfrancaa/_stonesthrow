@@ -1,6 +1,6 @@
 <?php
 
-	if(isset($_POST["send"])){
+	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
 
 		if (
 			isset($_POST["username"]) &&
@@ -45,5 +45,7 @@
 	}
 				}
 			}
+
+$_SESSION["csrf_token"] = bin2hex(random_bytes(20));
 
 require("views/login.php");
