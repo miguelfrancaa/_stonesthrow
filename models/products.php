@@ -50,4 +50,17 @@
 
 		return $query->fetch();
 		}
+
+		public function updateStock($product){
+			$query = $this->db->prepare("
+			UPDATE products
+			SET stock = stock - ?
+			WHERE product_id = ?
+			");
+
+			return $query->execute([
+				$product["quantity"],
+				$product["product_id"]
+		]);
+		}
 	};

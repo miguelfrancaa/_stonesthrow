@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 	if(!isset($_SESSION["user_id"])) {
 
 		header("Location: /login/");
@@ -6,16 +6,35 @@
 
 	}
 
+    require("models/orders.php");
+
+    $modelOrders = new Orders;
+
+    $order_id = $modelOrders->insertOrder($_SESSION["user_id"]);
+
+    foreach($_SESSION["cart"] as $product){
+        $modelOrders->createOrderDetail($order_id, $product);
+
+        require("models/products.php");
+
+         $modelProducts = new Products;
+
+        $modelProducts->updateStock($product);
+    }
+
+
     require("models/users.php");
 
-    $model = new Users();
+    $modelUsers = new Users();
 
-    $user = $model->getUserCheckout($_SESSION["user_id"]);
+    $user = $modelUsers->getUserCheckout($_SESSION["user_id"]);
 
 	if(empty($_SESSION["cart"])){
 		header("Location: /cart/");
 		exit;
 	}
+
+    unset($_SESSION["cart"]);
 
     require("views/checkout.php"); 
 ?>
@@ -45,13 +64,13 @@ try {
     $mail->Port       = ''.ENV["MAIL_PORT"].'';                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('marcomaluco7@gmail.com', 'Mailer');
+    $mail->setFrom('marcomaluco7@gmail.com', 'StonesThrow');
     $mail->addAddress(''.$user["email"].'', ''.$user["username"].'');     //Add a recipient
 
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'STONES THROW - #'.order_id.'';
+    $mail->Subject = 'STONES THROW - #'.$order_id.'';
     $mail->Body    = 'Hello <b>'.$user["username"].'</b>! <br> Thanks for your order. Here are the information to the payment:<br>
     Please check too if your information is correct.<br>
     Name: <b>'.$user["name"].'</b><br>
