@@ -14,8 +14,9 @@
 <?php
 	require("includes/header.php");
 ?>
-	<main>
+	<main style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
 		<h1>Encomenda Criada<br> Número #<?= $order_id ?></h1>
+		<h2>Por favor siga os passos enviados por email para finalizar a compra.</h2>
 	</main>
 
 	<script src="/js/jquery-3.6.0.min.js"></script>

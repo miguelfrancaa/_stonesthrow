@@ -55,15 +55,15 @@ try {
     $mail->Body    = 'Hello <b>'.$user["username"].'</b>! <br> Thanks for your order. Here are the information to the payment:<br>
     Please check too if your information is correct.<br>
     Name: <b>'.$user["name"].'</b><br>
-    Country: <b>'.$user["country"].'</b><br>
+    Country: <b>'.$user["countryname"].'</b><br>
     Address: <b>'.$user["address"].'</b><br>
     Postal-Code: <b>'.$user["postal_code"].'</b><br>
     City: <b>'.$user["city"].'</b>
       ';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+unset($_SESSION["cart"]);

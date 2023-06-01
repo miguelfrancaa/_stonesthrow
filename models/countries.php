@@ -1,7 +1,7 @@
 <?php
-	require("base.php");
+	require_once("base.php");
 
-	class Countires extends Base{
+	class Countries extends Base{
 		public function getCountries(){
 			$query = $this->db->prepare("
 			SELECT *
