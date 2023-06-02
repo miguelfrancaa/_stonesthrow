@@ -17,11 +17,11 @@
 
 			$model = new Users();
 
-			$Allusers = $model->checkUsername();
+			$Allusers = $model->checkUserInfo();
 
 			foreach($Allusers as $Alluser){
 				if ($_POST["username"] != $Alluser["username"]) {
-					$mess = "nao existe conta";
+					$mess = "There is no account with this username.";
 				}else{		
 
 					$user = $model->getUser($_POST["username"]);

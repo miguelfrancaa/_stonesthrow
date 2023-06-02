@@ -1,3 +1,6 @@
+<?php
+	print_r($usersUsername[0]);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -53,6 +56,7 @@
 		</form>
 		</div>
 		</div>
+		<?=$message?>
 	</main>
 
 	<script src="/js/jquery-3.6.0.min.js"></script>

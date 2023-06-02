@@ -1,6 +1,3 @@
-<?php
-	print_r($_SESSION);
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -58,7 +55,13 @@
 ?>
 	</main>
 
+	
 
+	<script>
+		if ( window.history.replaceState ) {
+		  window.history.replaceState( null, null, window.location.href );
+		}
+	</script>
 	<script src="/js/jquery-3.6.0.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/script.js"></script>

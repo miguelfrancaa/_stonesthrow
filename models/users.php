@@ -3,7 +3,7 @@
 
 	class Users extends Base{
 
-		public function checkUsername(){
+		public function checkUserInfo(){
 			$query = $this->db->prepare("
 				SELECT username
 				FROM users
@@ -64,5 +64,34 @@
 
 			return $this->db->lastInsertId();
 		}
-	}
+
+		public function checkUsername($username){
+			$query = $this->db->prepare("
+				SELECT COUNT(username) as countUsernames
+				FROM users
+				WHERE username = ?;
+				");
+
+			$query->execute([
+				$username
+			]);
+
+			return $query->fetch();
+		}
+
+		public function checkEmail($email){
+			$query = $this->db->prepare("
+				SELECT COUNT(email) as countEmails
+				FROM users
+				WHERE email = ?;
+				");
+
+			$query->execute([
+				$email
+			]);
+
+			return $query->fetch();
+		}
+		}
+	
 ?>

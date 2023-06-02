@@ -50,18 +50,37 @@
 
 			$modelUsers = new Users();
 
+			$usersUsername = $modelUsers->checkUsername($_POST["username"]);
+
+			$usersEmail = $modelUsers->checkEmail($_POST["email"]);
+
+			if($usersUsername[0] > 0){
+				$message = "Já existe um username com esta conta.";
+				echo $message;
+				goto end;
+			}else if($usersEmail[0] > 0){
+				$message = "Já existe um email com este email.";
+				echo $message;
+				goto end;
+			}else{
+
 			$user_id = $modelUsers->createUser($_POST);
 
 			$_SESSION["user_id"] = $user_id;
+
 			header("Location: /cart/");
 
-		}else
+
+			}}else
 			http_response_code(400);
 			$message = "Por favor preencher todos os campos corretamente.";
-			echo "message";
+			echo $message;
 	}
 
 
-}
+end:
+
+			}
+
 
 require("views/register.php");
