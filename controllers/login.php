@@ -1,6 +1,6 @@
 <?php
 
-	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
+	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] == $_SESSION["csrf_token"]){
 
 		if (
 			isset($_POST["username"]) &&
@@ -15,23 +15,24 @@
 		{
 			require("models/users.php");
 
-			$model = new Users();
+			$modelUsers = new Users();
 
-			$Allusers = $model->checkUserInfo();
+			$Allusers = $modelUsers->checkUserInfo();
 
 			foreach($Allusers as $Alluser){
 				if ($_POST["username"] != $Alluser["username"]) {
 					$mess = "There is no account with this username.";
 				}else{		
 
-					$user = $model->getUser($_POST["username"]);
+					$user = $modelUsers->getUser($_POST["username"]);
 
 					if(
 						!empty($user) &&
 						password_verify($_POST["password"], $user["password"])
 					){
 						$_SESSION["user_id"] = $user["user_id"];
-						header("Location: cart.php");
+						header("Location: /cart/");
+						$mess = "There is no account with this username.";
 					}
 					else{
 						http_response_code(401);

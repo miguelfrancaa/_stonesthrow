@@ -9,7 +9,7 @@
 				FROM users
 				");
 
-			$query->execute();
+			$query->execute([]);
 
 			return $query->fetchAll();
 		}
