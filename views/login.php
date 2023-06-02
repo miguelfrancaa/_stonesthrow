@@ -1,5 +1,6 @@
 <?php
-	print_r($_SESSION["csrf_token"])
+	print_r($_SESSION["csrf_token"]);
+	print_r($_SESSION["captcha"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,8 +31,13 @@
 			<input class="formInputs formInput1" type="text" name="username" minlength="4" maxlength="32" required><br><br><br>
 			<label class="formLabels formLabel2" for="password">PASSWORD</label><br>
 			<input class="formInputs formInput2" type="password" name="password" minlength="8" maxlength="500" required><br><br><br>
+			<div>
+				<div><img src="/views/captcha.php" alt=""></div><br>
+				<label style="font-weight: 100;">Please write the captcha text -> <input type="text" name="captcha" required><br>Robots don't like music.</label>
+			</div>
+			<br><br>
 			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>
-			<div><?php
+			<div><br><?php
 
 			if(isset($_POST["send"])){
 				echo $mess;

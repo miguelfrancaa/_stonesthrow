@@ -1,6 +1,8 @@
 <?php
 
-	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] == $_SESSION["csrf_token"]){
+	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
+
+		if($_POST["captcha"] === $_SESSION["captcha"]){
 
 		if (
 			isset($_POST["username"]) &&
@@ -45,6 +47,9 @@
 		
 	}
 				}
+			}else{
+				echo "captcha is not correct";
+			}
 			}
 
 $_SESSION["csrf_token"] = bin2hex(random_bytes(20));

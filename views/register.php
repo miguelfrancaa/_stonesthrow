@@ -32,7 +32,8 @@
 			<input class="formInputs formInput3" type="password" name="password" minlength="8" maxlength="500" required><br><br><br>
 			<label class="formLabels formLabel4" for="repeatPassword">REPEAT PASSWORD</label><br>
 			<input class="formInputs formInput4" type="password" name="repeatPassword" minlength="8" maxlength="500" required><br><br><br>
-			<label class="formLabels formLabel8">COUNTRY
+			<input type="hidden" name="csrf_token" value="<?= $_SESSION["csrf_token"]?>">
+			<label class="formLabels formLabel8">COUNTRY 
 				<select name="country" required>
 <?php
 		foreach ($countries as $country) {

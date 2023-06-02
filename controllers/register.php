@@ -1,4 +1,8 @@
 <?php
+	if(isset($_SESSION["user_id"])){
+		header("Location: /login/");
+	}
+
 	require("models/countries.php");
 
 	$modelCountries = new Countries();
@@ -11,8 +15,8 @@
 	}
 
 
-	if( isset($_POST["send"]) ){
-
+	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
+ 
 		foreach($_POST as $key => $value) {
 			$_POST[ $key ] = trim(htmlspecialchars(strip_tags($value)));
 		}
@@ -82,5 +86,6 @@ end:
 
 			}
 
+$_SESSION["csrf_token"] = bin2hex(random_bytes(20));
 
-require("views/register.php");
+require("views/register.php"); 
