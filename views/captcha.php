@@ -3,9 +3,9 @@
 
 	$image = imagecreate(110, 40);
 
-	imagecolorallocate($image, 230, 230, 230);
+	imagecolorallocate($image, 254, 87, 33);
 
-	$color = imagecolorallocate($image, 20, 20, 20);
+	$color = imagecolorallocate($image, 255, 255, 255);
 
 	$font = "../fonts/GillSans/GillSans-Bold-02.ttf";
 
