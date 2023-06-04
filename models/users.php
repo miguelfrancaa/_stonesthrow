@@ -92,6 +92,27 @@
 
 			return $query->fetch();
 		}
+
+		public function listUsers(){
+			$query = $this->db->prepare("
+				SELECT *
+				FROM users
+				");
+
+				$query->execute([]);
+
+				return $query->fetchAll();
+		}
+
+		public function deleteUser($user_id){
+			$query = $this->db->prepare("
+				DELETE
+				FROM users
+				WHERE user_id = ?;
+				");
+
+				$query->execute([$user_id]);
+		}
 		}
 	
 ?>
