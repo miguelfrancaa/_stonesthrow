@@ -63,4 +63,15 @@
 				$product["product_id"]
 		]);
 		}
+
+		public function listProducts(){
+			$query = $this->db->prepare("
+			SELECT *
+			FROM products
+			");
+
+			$query->execute([]);
+
+			return $query->fetchAll();
+		}
 	};

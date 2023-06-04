@@ -36,5 +36,5 @@
 		exit;
 	}
 
-	echo "Entrou";
+	require("views/adminsmenu.php");
 ?>
