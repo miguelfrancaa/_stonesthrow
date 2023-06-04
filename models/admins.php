@@ -6,20 +6,20 @@
 			$query = $this->db->prepare("
 				SELECT admin_id, password
 				FROM admins
-				WHERE username = ?;
+				WHERE email = ?;
 				");
 
-			$query->execute([ $data["username"]] );
+			$query->execute([ $data["email"]] );
 
 			$admin = $query->fetch();
 
 			if(
-				!emtpy($admin) && password_verify($data["password"], $admin["password"])
+				!empty($admin) && ($data["password"] == $admin["password"])
 			){
 				return $admin;
 			}
 
 		return[];
 		}
-	
+	}
 ?>
