@@ -5,6 +5,7 @@
 		<li><a href="/admin_admins"><i class="fa fa-user"></i> Admins</a></li>
 		<li><a href="/admin_products"><i class="fa fa-list"></i> Products</a></li>
 		<li><a href="/admin_artists"><i class="fa fa-music"></i> Artists</a></li>
+		<li><a href="/admin_news"><i class="fa fa-newspaper-o"></i> News</a></li>
 		<li><a href="/admin_events"><i class="fa fa-calendar"></i> Events</a></li>
 		<li><a href="/admin_videos"><i class="fa fa-youtube"></i> Videos</a></li>
 		<li><a href="/admin_orders"><i class="fa fa-shopping-cart"></i> Orders</a></li>

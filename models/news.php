@@ -44,5 +44,89 @@
 
 			}
 
-	}
+		public function listNews(){
+			$query = $this->db->prepare("
+			SELECT *
+			FROM news
+			");
+
+			$query->execute([]);
+
+			return $query->fetchAll();
+		}
+
+		public function deleteNew($new_id){
+			$query = $this->db->prepare("
+				DELETE
+				FROM news
+				WHERE new_id = ?;
+				");
+
+				$query->execute([$new_id]);
+		}
+
+		public function newToEdit($id){
+			$query = $this->db->prepare("
+				SELECT *
+				FROM news
+				WHERE new_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetch();
+		}
+
+		public function updateNew($data){
+
+			$query = $this->db->prepare("
+				UPDATE news
+				SET title = ?,
+					content = ?,
+					content2 = ?,
+					image = ?,
+					video = ?,
+					imageCarroussel = ?,
+					top = ?,
+					leftpx = ?,
+					artist_id = ?
+				WHERE new_id = ?
+				");
+
+			$query->execute([
+				$data["new_title"],
+				$data["new_content"],
+				$data["new_content2"],
+				$_FILES["new_image"]["name"],
+				$data["new_video"],
+				$_FILES["new_imageCarroussel"]["name"],
+				$data["new_top"],
+				$data["new_left"],
+				$data["new_artist"],
+				$data["new_id"]
+			]);
+		}
+
+		public function newNew($data){
+			$query = $this->db->prepare("
+				INSERT INTO news (title, content, content2, image, video, imageCarroussel, top, leftpx, artist_id)
+				VALUES(?, ?, ?, ?, ?, ?, NULLIF(?, ''), NULLIF(?, ''), NULLIF(?, ''));
+				");
+
+			$query->execute([
+				$data["new_title"],
+				$data["new_content"],
+				$data["new_content2"],
+				$_FILES["new_image"]["name"],
+				$data["new_video"],
+				$_FILES["new_imageCarroussel"]["name"],
+				$data["new_top"],
+				$data["new_left"],
+				$data["new_artist"]
+			]);
+		}
+
+	};
+
+	
 ?>
