@@ -6,9 +6,6 @@
 		$option = $url_parts[2];
 	}
 
-	if(!empty($url_parts[3])) {
-		$resource_id = $url_parts[3];
-	}
 
 	if(isset($_POST["send"]) && empty($option) && $_SESSION["csrf_token"] === $_POST["csrf_token"]){
 		require("models/admins.php");

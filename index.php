@@ -15,6 +15,10 @@
 		$id = $url_parts[2];
 	}
 
+	if(!empty($url_parts[3])) {
+	$resource_id = $url_parts[3];
+	}
+
 
 	require("controllers/" . $controller . ".php");
 	

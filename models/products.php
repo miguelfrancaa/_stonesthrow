@@ -74,4 +74,57 @@
 
 			return $query->fetchAll();
 		}
+
+		public function deleteProduct($product_id){
+			$query = $this->db->prepare("
+				DELETE
+				FROM products
+				WHERE product_id = ?;
+				");
+
+				$query->execute([$product_id]);
+		}
+
+		public function productToEdit($id){
+			$query = $this->db->prepare("
+				SELECT *
+				FROM products
+				WHERE product_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetch();
+		}
+
+		public function updateProduct($data){
+
+			$query = $this->db->prepare("
+				UPDATE products
+				SET item = ?,
+					type = ?,
+					description = ?,
+					price = ?,
+					stock = ?,
+					image = ?,
+					tracklist = ?,
+					category_id = ?,
+					artist_id = ?
+				WHERE product_id = ?
+				");
+
+			$query->execute([
+				$data["product_item"],
+				$data["product_type"],
+				$data["product_description"],
+				$data["product_price"],
+				$data["product_stock"],
+				$data["photoname"].".png",
+				$data["product_tracklist"],
+				$data["product_category"],
+				$data["product_artist"],
+				$data["product_id"]
+			]);
+		}
+
 	};

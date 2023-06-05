@@ -37,6 +37,8 @@
 <?php
 				foreach($products as $product){
 					echo "
+						<form method='post' action='/delete_product'>
+						<input type='hidden' name='product_id' value='".$product["product_id"]."'>
 						<tr>
 							<th>". $product["product_id"] ."</th>
 							<th>". $product["item"] ."</th>
@@ -49,10 +51,11 @@
 							<th>". $product["category_id"] ."</th>
 							<th>". $product["artist_id"] ."</th>
 							<th>
-							<a href='apagar-produto' class='apagar'>ELIMINAR</a><br>
-							<a href='editar-produto' class='editar'>EDITAR</a>
+							<button type='submit' name='send' class='apagar'>Eliminar</button>
+							<a href='/edit_product/". $product["product_id"] ."' class='editar'>Editar</a>
 							</th>
 						</tr>
+						</form>
 					";
 				}
 ?>
