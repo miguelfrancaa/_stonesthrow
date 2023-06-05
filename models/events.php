@@ -34,5 +34,54 @@
 
 			$query->execute([$event_id]);
 	}
+
+	public function eventToEdit($id){
+			$query = $this->db->prepare("
+				SELECT *
+				FROM events
+				WHERE event_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetch();
+		}
+
+	public function updateEvent($data){
+
+			$query = $this->db->prepare("
+				UPDATE events
+				SET local = ?,
+					event_date = ?,
+					mode = ?,
+					link = ?,
+					artist_id = ?
+				WHERE event_id = ?
+				");
+
+			$query->execute([
+				$data["event_local"],
+				$data["event_date"],
+				$data["event_mode"],
+				$data["event_link"],
+				$data["event_artist"],
+				$data["event_id"]
+			]);
+		}
+
+		public function newEvent($data){
+			$query = $this->db->prepare("
+				INSERT INTO events (local, event_date, mode, link, artist_id)
+				VALUES(?, ?, ?, ?, ?);
+				");
+
+			$query->execute([
+				$data["event_local"],
+				$data["event_date"],
+				$data["event_mode"],
+				$data["event_link"],
+				$data["event_artist"]
+			]);
+		}
 }
 ?>

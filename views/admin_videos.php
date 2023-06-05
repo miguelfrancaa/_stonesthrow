@@ -14,37 +14,33 @@
 	<body class="admin-crm inicio-page">
 		<?php require("includes/menuback.php"); ?>
 		<main class="pagina-geral"> 
-			<h1>Gestao de Eventos</h1>
+			<h1>Gestao de Videos</h1>
 
 			<div class="accoes-gerais">
-				<a href="new_event/">Novo Evento</a>
+				<a href="new_video/">Novo Video</a>
 			</div>
 
 			<table>
 				<tr class="head-line">
 					<th>ID</th>
-					<th>LOCAL</th>
-					<th>EVENT DATE</th>
-					<th>MODE</th>
-					<th>LINK</th>
-					<th>ARTIST</th>
+					<th>LINK(YOUTUBE)</th>
+					<th>NAME</th>
+					<th>ARTIST_ID</th>
 					<th>ACTIONS</th>
 				</tr>
 <?php
-				foreach($events as $event){
+				foreach($videos as $video){
 					echo "
-						<form method='post' action='/delete_event'>
-						<input type='hidden' name='event_id' value='".$event["event_id"]."'>
+						<form method='post' action='/delete_video'>
+						<input type='hidden' name='video_id' value='".$video["video_id"]."'>
 						<tr>
-							<th>". $event["event_id"] ."</th>
-							<th>". $event["local"] ."</th>
-							<th>". $event["event_date"] ."</th>
-							<th>". $event["mode"] ."</th>
-							<th>". $event["link"] ."</th>
-							<th>". $event["artist_id"] ."</th>
+							<th>". $video["video_id"] ."</th>
+							<th>". $video["youtube_link"] ."</th>
+							<th>". $video["name"] ."</th>
+							<th>". $video["artist_id"] ."</th>
 							<th>
 							<button type='submit' name='send' class='apagar'>Eliminar</button>
-							<a href='/edit_event/". $event["event_id"] ."' class='editar'>Editar</a>
+							<a href='/edit_video/". $video["video_id"] ."' class='editar'>Editar</a>
 							</th>
 						</tr>
 						</form>
