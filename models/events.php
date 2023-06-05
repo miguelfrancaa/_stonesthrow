@@ -13,5 +13,26 @@
 
 			return $query->fetchAll( PDO::FETCH_ASSOC);
 		}
+
+	public function listEvents(){
+		$query = $this->db->prepare("
+		SELECT *
+		FROM events
+		");
+
+		$query->execute([]);
+
+		return $query->fetchAll();
+		}
+
+	public function deleteEvent($event_id){
+		$query = $this->db->prepare("
+			DELETE
+			FROM events
+			WHERE event_id = ?;
+			");
+
+			$query->execute([$event_id]);
 	}
+}
 ?>

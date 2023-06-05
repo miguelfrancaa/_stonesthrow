@@ -17,42 +17,34 @@
 			<h1>Gestao de Produtos</h1>
 
 			<div class="accoes-gerais">
-				<a href="new_product.php">Novo Produto</a>
+				<a href="newevent/">Novo Produto</a>
 			</div>
 
 			<table>
 				<tr class="head-line">
 					<th>ID</th>
-					<th>ITEM</th>
-					<th>TYPE</th>
-					<th>DESCRIPTION</th>
-					<th>PRICE</th>
-					<th>STOCK</th>
-					<th>IMAGE</th>
-					<th>TRACKLIST</th>
-					<th>CATEGORY</th>
+					<th>LOCAL</th>
+					<th>EVENT DATE</th>
+					<th>MODE</th>
+					<th>LINK</th>
 					<th>ARTIST</th>
 					<th>ACTIONS</th>
 				</tr>
 <?php
-				foreach($products as $product){
+				foreach($events as $event){
 					echo "
-						<form method='post' action='/delete_product'>
-						<input type='hidden' name='product_id' value='".$product["product_id"]."'>
+						<form method='post' action='/delete_event'>
+						<input type='hidden' name='event_id' value='".$event["event_id"]."'>
 						<tr>
-							<th>". $product["product_id"] ."</th>
-							<th>". $product["item"] ."</th>
-							<th>". $product["type"] ."</th>
-							<th>". substr($product["description"], 0, 50) ."...</th>
-							<th>". $product["price"] ."</th>
-							<th>". $product["stock"] ."</th>
-							<th>". $product["image"] ."</th>
-							<th>". substr($product["tracklist"], 0, 50) ."...</th>
-							<th>". $product["category_id"] ."</th>
-							<th>". $product["artist_id"] ."</th>
+							<th>". $event["event_id"] ."</th>
+							<th>". $event["local"] ."</th>
+							<th>". $event["event_date"] ."</th>
+							<th>". $event["mode"] ."</th>
+							<th>". $event["link"] ."</th>
+							<th>". $event["artist_id"] ."</th>
 							<th>
 							<button type='submit' name='send' class='apagar'>Eliminar</button>
-							<a href='/edit_product/". $product["product_id"] ."' class='editar'>Editar</a>
+							<a href='/edit_product/". $event["event_id"] ."' class='editar'>Editar</a>
 							</th>
 						</tr>
 						</form>

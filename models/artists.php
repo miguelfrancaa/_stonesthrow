@@ -62,5 +62,20 @@
 
 				$query->execute([$artist_id]);
 		}
+
+		public function newArtist($data){
+			$query = $this->db->prepare("
+				INSERT INTO artists (name, description, photo, description_photo)
+				VALUES(?, ?, ?, ?);
+				");
+
+			$query->execute([
+				$data["artist_name"],
+				$data["artist_description"],
+				$_FILES["artist_photo"]["name"],
+				$_FILES["artist_descriptionphoto"]["name"]
+				
+			]);
+		}
 }
 ?>
