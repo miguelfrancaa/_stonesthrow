@@ -16,8 +16,4 @@
 
 	require("views/edit_product.php");
 
-	print_r($_POST);
-
-	print_r($_FILES);
-
 ?>

@@ -17,7 +17,7 @@
 			<h1>Gestao de Produtos</h1>
 
 			<div class="accoes-gerais">
-				<a href="new_product.php">Novo Produto</a>
+				<a href="new_product/">Novo Produto</a>
 			</div>
 
 			<table>
