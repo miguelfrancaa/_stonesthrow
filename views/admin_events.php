@@ -14,10 +14,10 @@
 	<body class="admin-crm inicio-page">
 		<?php require("includes/menuback.php"); ?>
 		<main class="pagina-geral"> 
-			<h1>Gestao de Produtos</h1>
+			<h1>Gestao de Eventos</h1>
 
 			<div class="accoes-gerais">
-				<a href="newevent/">Novo Produto</a>
+				<a href="newevent/">Novo Evento</a>
 			</div>
 
 			<table>
