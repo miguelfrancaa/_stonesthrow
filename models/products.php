@@ -119,11 +119,30 @@
 				$data["product_description"],
 				$data["product_price"],
 				$data["product_stock"],
-				$data["photoname"].".png",
+				$_FILES["product_image"]["name"],
 				$data["product_tracklist"],
 				$data["product_category"],
 				$data["product_artist"],
 				$data["product_id"]
+			]);
+		}
+
+		public function newProduct($data){
+			$query = $this->db->prepare("
+				INSERT INTO products (item, type, description, price, stock, image, tracklist, category_id, artist_id)
+				VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);
+				");
+
+			$query->execute([
+				$data["product_item"],
+				$data["product_type"],
+				$data["product_description"],
+				$data["product_price"],
+				$data["product_stock"],
+				$_FILES["product_image"]["name"],
+				$data["product_tracklist"],
+				$data["product_category"],
+				$data["product_artist"]
 			]);
 		}
 

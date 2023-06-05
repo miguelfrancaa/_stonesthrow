@@ -41,5 +41,26 @@
 
 		return $query->fetch();
 		}
+
+	public function listArtists(){
+		$query = $this->db->prepare("
+		SELECT *
+		FROM artists
+		");
+
+		$query->execute([]);
+
+		return $query->fetchAll();
+	}
+
+	public function deleteArtist($artist_id){
+			$query = $this->db->prepare("
+				DELETE
+				FROM artists
+				WHERE artist_id = ?;
+				");
+
+				$query->execute([$artist_id]);
+		}
 }
 ?>
