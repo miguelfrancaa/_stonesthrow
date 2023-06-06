@@ -9,5 +9,5 @@
 
 	require("views/admin_orderdetails.php");
 
-	print_r($product);
+	print_r($products);
 ?>

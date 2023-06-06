@@ -64,4 +64,26 @@
 
 			return $query->fetchAll();
 		}
+
+		public function deleteOrder($order_id){
+			$query = $this->db->prepare("
+				DELETE
+				FROM orders
+				WHERE order_id = ?;
+				");
+
+				$query->execute([$order_id]);
+		}
+
+		public function getProductsCancelled($id){
+			$query = $this->db->prepare("
+				SELECT product_id, quantity
+				FROM orderDetails
+				WHERE order_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetchAll();
+		}
 	}

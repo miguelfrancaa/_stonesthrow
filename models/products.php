@@ -146,7 +146,7 @@
 			]);
 		}
 
-		public function updateStockWhenCanceled($product){
+		public function updateStockWhenCancelled($product_id){
 			$query = $this->db->prepare("
 			UPDATE products
 			SET stock = stock + ?
@@ -154,8 +154,8 @@
 			");
 
 			return $query->execute([
-				$product["quantity"],
-				$product["product_id"]
+				$product_id["quantity"],
+				$product_id["product_id"]
 		]);
 		}
 
