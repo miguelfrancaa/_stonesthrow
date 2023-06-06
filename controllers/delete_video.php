@@ -1,4 +1,5 @@
 <?php
+	require("includes/admin_controller.php");
 	require("models/videos.php");
 
 	$model = new Videos();

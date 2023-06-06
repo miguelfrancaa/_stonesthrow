@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+
 	require("models/events.php");
 
 	$model = new Events();

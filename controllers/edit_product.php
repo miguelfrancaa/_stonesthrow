@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+
 	require_once("models/products.php");
 
 	$model = new Products();

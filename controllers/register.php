@@ -1,4 +1,6 @@
 <?php
+
+
 	if(isset($_SESSION["user_id"])){
 		header("Location: /login/");
 	}
@@ -16,12 +18,12 @@
 
 
 	if(isset($_POST["send"]) && isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]){
- 
+
+
 		foreach($_POST as $key => $value) {
 			$_POST[ $key ] = trim(htmlspecialchars(strip_tags($value)));
 		}
 
-		if( isset($_POST["send"]) ){
 		if(
 			isset($_POST["name"]) &&
 			isset($_POST["username"]) &&
@@ -48,7 +50,7 @@
 			mb_strlen($_POST["postalcode"]) >= 4 &&
 			mb_strlen($_POST["postalcode"]) <= 32 &&
 			in_array($_POST["country"], $country_codes)
-		){
+		) {
 
 			require("models/users.php");
 
@@ -59,13 +61,9 @@
 			$usersEmail = $modelUsers->checkEmail($_POST["email"]);
 
 			if($usersUsername[0] > 0){
-				$message = "Já existe um username com esta conta.";
-				echo $message;
-				goto end;
+				$message = "Já existe uma conta com este username.";
 			}else if($usersEmail[0] > 0){
-				$message = "Já existe um email com este email.";
-				echo $message;
-				goto end;
+				$message = "Já existe uma conta com este email.";
 			}else{
 
 			$user_id = $modelUsers->createUser($_POST);
@@ -74,17 +72,19 @@
 
 			header("Location: /cart/");
 
+			exit;
 
-			}}else
+
+			}
+		}
+		else{
 			http_response_code(400);
 			$message = "Por favor preencher todos os campos corretamente.";
-			echo $message;
+		}
 	}
 
 
-end:
-
-			}
+			
 
 $_SESSION["csrf_token"] = bin2hex(random_bytes(20));
 

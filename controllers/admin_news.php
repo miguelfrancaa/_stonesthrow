@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+
 	require("models/news.php");
 
 	$model = new News();

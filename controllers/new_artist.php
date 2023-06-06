@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+	
 	require("models/artists.php");
 
 	$model = new Artists();
@@ -10,6 +12,8 @@
 		move_uploaded_file($_FILES["artist_descriptionphoto"]["tmp_name"], "img/artists/" . $_FILES["artist_descriptionphoto"]["name"]);
 
 		$artist = $model->newArtist( $_POST );
+
+		header("Location: /admin_artists")
 	}	
 
 	require("views/new_artist.php");

@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+
 	require("models/events.php");
 
 	$model = new Events();
@@ -9,13 +11,9 @@
 
 		$event = $model->updateEvent($_POST);
 
-		//header("Location: /admin_products");
+		header("Location: /admin_events");
 	}
 
 	require("views/edit_event.php");
-
-	print_r($_POST);
-
-	print_r($_FILES);
 
 ?>

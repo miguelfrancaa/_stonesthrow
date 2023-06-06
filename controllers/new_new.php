@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+
 	require("models/news.php");
 
 	$model = new News();
@@ -11,6 +13,8 @@
 
 
 		$new = $model->newNew( $_POST );
+
+		header("Location: /admin_news")
 	}	
 
 	require("views/new_new.php");

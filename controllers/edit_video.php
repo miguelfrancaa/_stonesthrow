@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+	
 	require("models/videos.php");
 
 	$model = new Videos();
@@ -9,13 +11,9 @@
 
 		$video = $model->updateVideo($_POST);
 
-		//header("Location: /admin_products");
+		header("Location: /admin_videos");
 	}
 
 	require("views/edit_video.php");
-
-	print_r($_POST);
-
-	print_r($_FILES);
 
 ?>

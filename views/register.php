@@ -1,6 +1,3 @@
-<?php
-	print_r($usersUsername[0]);
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,7 +18,10 @@
 		<div class="forms">
 		<div class="logForms">
 		<h1 class="formTitle">CREATE ACCCOUNT</h1><br>
-		<form method="post" action="/register/">
+		<?php
+			echo $_SESSION["csrf_token"];
+		?>
+		<form method="post" action="/register">
 			<label class="formLabels formLabel1" for="username">NAME</label><br>
 			<input class="formInputs formInput1" type="text" name="name" value="" minlength="6" maxlength="100" required><br><br><br>
 			<label class="formLabels formLabel8" for="username">USERNAME</label><br>
@@ -52,12 +52,17 @@
 			<input class="formInputs formInput7" type="text" name="city" minlength="3" maxlength="50" required><br><br><br>
 			<label class="formLabels" for="birthday">BIRTH DATE</label><br><br>
 			<input class="formInputs" type="date" name="birthdate" minlength="6" maxlength="30" required><br><br><br>
-			<div class="buttonForm"><button type="submit" name="send">CREATE ACCOUNT</button><a href="/login/">LOGIN</a></div>
+			<div class="buttonForm"><button type="submit" name="send">CREATE ACCOUNT</button><a href="/login/">LOGIN</a>
+<?php
+		if(isset($_POST["send"])){
+		echo $message;
+		}
+?>
+			</div>
 
 		</form>
 		</div>
 		</div>
-		<?=$message?>
 	</main>
 
 	<script src="/js/jquery-3.6.0.min.js"></script>

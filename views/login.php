@@ -1,7 +1,3 @@
-<?php
-	print_r($_SESSION["csrf_token"]);
-	print_r($_SESSION["captcha"]);
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -33,7 +29,7 @@
 			<input class="formInputs formInput2" type="password" name="password" minlength="8" maxlength="500" required><br><br><br>
 			<div>
 				<div><img src="/views/captcha.php" alt=""></div><br>
-				<label style="font-weight: 100;">Please write the captcha text -> <input type="text" name="captcha" required><br>Robots don't like music.</label>
+				<label style="font-weight: 100;">Please write the captcha text -> <input type="text" name="captcha" required><br></label>
 			</div>
 			<br><br>
 			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>

@@ -6,7 +6,7 @@
 
     }
 
-    require("models/orders.php");
+    require_once("models/orders.php");
 
     $modelOrders = new Orders;
 
@@ -33,8 +33,6 @@
         header("Location: /cart/");
         exit;
     }
-
-    unset($_SESSION["cart"]);
 
     require("views/checkout.php"); 
 ?>

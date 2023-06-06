@@ -1,4 +1,6 @@
 <?php
+	require("includes/admin_controller.php");
+
 	require_once("models/products.php");
 
 	$model = new Products();
@@ -9,6 +11,8 @@
 
 
 		$product = $model->newProduct( $_POST );
+
+		header("Location: /admin_products")
 	}	
 
 	require("views/new_product.php");
