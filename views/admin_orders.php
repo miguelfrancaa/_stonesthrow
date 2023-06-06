@@ -39,7 +39,7 @@
 							<th>". $order["status"] ."</th>
 
 							<th>
-							<a href='/order_details/". $order["order_id"] ."' class='editar'>DETAILS</a>
+							<a href='/admin_orderdetails/". $order["order_id"] ."' class='editar'>DETAILS</a>
 							<button type='submit' name='send' class='apagar'>CANCEL ORDER</button>
 							</th>
 						</tr>

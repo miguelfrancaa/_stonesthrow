@@ -14,11 +14,29 @@
 	<body class="admin-crm inicio-page">
 		<?php require("includes/menuback.php"); ?>
 		<main class="pagina-geral"> 
-			<h1>Detalehs de Encomenda</h1>
+			<h1>Detalhes de Encomenda # <?= $id ?></h1>
 
-			<div class="accoes-gerais">
-				<a href="new_video/">Novo Video</a>
-			</div>
+<?php
+
+	$total = 0;
+
+	foreach ($products as $product) {
+		$subtotal = $product["priceEach"] * $product["quantity"];
+
+		$total += $subtotal;
+
+		echo "PRODUCT ID: ". $product["product_id"] ."<br>PRICE EACH: ". $product["priceEach"] ."<br>QUANTITY: ". $product["quantity"] ."<br>SUBTOTAL: ". $subtotal ."<br><br>";
+
+
+	}
+
+	echo "TOTAL = ".$total."€";
+
+
+
+
+?>
+
 
 			
 
@@ -26,4 +44,3 @@
 
 		</main>
 	</body>
-</html>

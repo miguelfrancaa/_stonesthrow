@@ -40,4 +40,28 @@
 
 			return $query->fetchAll();
 		}
+
+		public function getOrder($id){
+			$query = $this->db->prepare("
+				SELECT order_id
+				FROM orderdetails
+				WHERE order_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetchAll();
+		}
+
+		public function getInfoFromOrder($id){
+			$query = $this->db->prepare("
+				SELECT product_id, priceEach, quantity
+				FROM orderDetails
+				WHERE order_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetchAll();
+		}
 	}

@@ -1,3 +1,13 @@
  <?php
-	require("views/order_details.php");
+	require("models/orders.php");
+
+	$model = new Orders();
+
+	$order = $model->getOrder($id);
+
+	$products = $model->getInfoFromOrder($id);
+
+	require("views/admin_orderdetails.php");
+
+	print_r($product);
 ?>

@@ -15,7 +15,7 @@
     foreach($_SESSION["cart"] as $product){
         $modelOrders->createOrderDetail($order_id, $product);
 
-        require("models/products.php");
+        require_once("models/products.php");
 
         $modelProducts = new Products;
 
