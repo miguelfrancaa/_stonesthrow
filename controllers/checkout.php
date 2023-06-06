@@ -1,10 +1,10 @@
  <?php 
-	if(!isset($_SESSION["user_id"])) {
+    if(!isset($_SESSION["user_id"])) {
 
-		header("Location: /login/");
-		exit;
+        header("Location: /login/");
+        exit;
 
-	}
+    }
 
     require("models/orders.php");
 
@@ -17,7 +17,7 @@
 
         require("models/products.php");
 
-         $modelProducts = new Products;
+        $modelProducts = new Products;
 
         $modelProducts->updateStock($product);
     }
@@ -29,10 +29,10 @@
 
     $user = $modelUsers->getUserCheckout($_SESSION["user_id"]);
 
-	if(empty($_SESSION["cart"])){
-		header("Location: /cart/");
-		exit;
-	}
+    if(empty($_SESSION["cart"])){
+        header("Location: /cart/");
+        exit;
+    }
 
     unset($_SESSION["cart"]);
 

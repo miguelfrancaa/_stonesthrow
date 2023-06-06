@@ -29,4 +29,15 @@
 			$order_id, $product["product_id"], $product["price"], $product["quantity"]
 		]);
 		}
+
+		public function listOrders(){
+			$query = $this->db->prepare("
+			SELECT *
+			FROM orders
+			");
+
+			$query->execute([]);
+
+			return $query->fetchAll();
+		}
 	}

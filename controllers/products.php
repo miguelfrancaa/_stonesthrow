@@ -13,7 +13,7 @@
 			die();
 		}
 
-	require("models/products.php");
+	require_once("models/products.php");
 
 	$model = new Products();
 
