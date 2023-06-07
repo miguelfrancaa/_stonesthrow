@@ -13,7 +13,7 @@
 
 		$artist = $model->newArtist( $_POST );
 
-		header("Location: /admin_artists")
+		header("Location: /admin_artists");
 	}	
 
 	require("views/new_artist.php");

@@ -10,6 +10,4 @@
 	$products = $model->getInfoFromOrder($id);
 
 	require("views/admin_orderdetails.php");
-
-	print_r($products);
 ?>

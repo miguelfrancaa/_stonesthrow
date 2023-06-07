@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>STONES THROW</title>
 		<meta name="keywords" content="STONES THROW">
-		<link rel="icon" href="img/logost.ico">
+		<link rel="icon" href="/img/logost.ico">
 		<meta name="description" content="stones throw, records, hiphop, music, alternative, quasimoto, mfdoom, underground, label">
 		<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -24,9 +24,9 @@
 	</main>
 
 
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="/js/jquery-3.6.0.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/script.js"></script>
 	<script type="text/javascript">
 		let img404 = [
 		<?php
@@ -48,7 +48,7 @@
 		$(".imgError").css("left", leftErrImage + '%');
 		$(".imgError").css("height", heightErrImage+ 'vh');
 		$(".imgError").css("width", widthErrImage+ '%');
-		$(".imgError").css("background-image", 'url(img/artists/'+img404[chooseImage]+')');
+		$(".imgError").css("background-image", 'url(/img/artists/'+img404[chooseImage]+')');
 
 	</script>
 	</body>

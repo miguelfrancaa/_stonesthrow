@@ -18,9 +18,6 @@
 		<div class="forms">
 		<div class="logForms">
 		<h1 class="formTitle">CREATE ACCCOUNT</h1><br>
-		<?php
-			echo $_SESSION["csrf_token"];
-		?>
 		<form method="post" action="/register">
 			<label class="formLabels formLabel1" for="username">NAME</label><br>
 			<input class="formInputs formInput1" type="text" name="name" value="" minlength="6" maxlength="100" required><br><br><br>

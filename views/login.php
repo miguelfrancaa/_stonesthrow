@@ -1,3 +1,7 @@
+<?php
+	echo '<span style="color: white">' . ($_SESSION["csrf_token"]) .'</span>';
+	echo '<span style="color: white">' . ($_SESSION["captcha"]) .'</span>';
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,10 +38,6 @@
 			<br><br>
 			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>
 			<div><br><?php
-
-			if(isset($_POST["send"])){
-				echo $mess;
-			}
 
 		?></div>
 		</form>

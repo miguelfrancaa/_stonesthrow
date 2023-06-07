@@ -48,7 +48,7 @@
 	}
 				}
 			}else{
-				$mess = "captcha is not correct";
+				echo "captcha is not correct";
 			}
 			}
 
