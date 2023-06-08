@@ -7,7 +7,6 @@
 			$query = $this->db->prepare("
 			SELECT photo
 			FROM artists
-			ORDER BY name
 			");
 
 		$query->execute();

@@ -14,7 +14,7 @@
 <?php
 	require("includes/header.php");
 ?>
-	<main> 
+	<main style="min-height: 100vh;"> 
 		<div class="container noAbsolute">
 <?php
 	if (!empty($products)) {
@@ -32,7 +32,7 @@
 				</div>
 			</div></a>";
 	}}else{
-		echo "Ainda n";
+		echo $message;
 	}
 ?>
 			</div>
