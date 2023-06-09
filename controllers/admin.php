@@ -19,7 +19,7 @@
 		}else{
 			http_response_code(401);
 
-			echo "Dados incorretos";
+			$message = 'Dados incorretos';
 		}
 	}
 

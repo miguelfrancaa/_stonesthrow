@@ -25,6 +25,11 @@
 				</label>
 				<input type="hidden" name="csrf_token" value="<?= $_SESSION["csrf_token"] ?>">
 				<button type="submit" name="send">Login</button>
+<?php
+	if(isset($_POST["send"])){
+		echo $message;
+	}
+?>
 			</form>
 		</main>
 

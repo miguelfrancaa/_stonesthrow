@@ -9,7 +9,7 @@
 
 		$event = $model->newVideo( $_POST );
 
-		header("Location: /admin_videos")
+		header("Location: /admin_videos");
 	}	
 
 	require("views/new_video.php");

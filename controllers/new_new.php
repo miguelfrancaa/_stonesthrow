@@ -14,7 +14,7 @@
 
 		$new = $model->newNew( $_POST );
 
-		header("Location: /admin_news")
+		header("Location: /admin_news");
 	}	
 
 	require("views/new_new.php");
