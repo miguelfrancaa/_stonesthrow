@@ -1,7 +1,3 @@
-<?php
-	echo '<span style="color: white">' . ($_SESSION["csrf_token"]) .'</span>';
-	echo '<span style="color: white">' . ($_SESSION["captcha"]) .'</span>';
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,7 +21,7 @@
 		<div class="forms">
 		<div class="logFormsLogin">
 		<h1 class="formTitle">LOGIN</h1><br>
-		<form method="post" action="/login/">
+		<form method="post" action="/login">
 			<input type="hidden" name="csrf_token" value="<?= $_SESSION["csrf_token"]?>">
 			<label class="formLabels formLabel1" for="username">USERNAME</label><br>
 			<input class="formInputs formInput1" type="text" name="username" minlength="4" maxlength="32" required><br><br><br>
@@ -38,7 +34,9 @@
 			<br><br>
 			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>
 			<div><br><?php
-
+				if (isset($_POST["send"])) {
+					echo $message;
+				}
 		?></div>
 		</form>
 		</div>
