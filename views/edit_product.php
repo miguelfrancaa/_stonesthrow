@@ -56,7 +56,7 @@
 							<div class="form-controls">
 								<label>
 									Image:<br>
-									<input type="file" name="product_image" value="<?= $product["image"] ?>">
+									<input type="file" name="product_image">
 								</label>
 							</div>
 							<div class="form-controls">

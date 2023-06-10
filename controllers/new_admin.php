@@ -18,7 +18,7 @@
 
 			$admin = $modelAdmins->createAdmin($_POST);
 
-			header("Location:/admin");
+			header("Location:/admin_admins");
 
 
 		}

@@ -22,13 +22,13 @@
 							<div class="form-controls">
 								<label>
 									ITEM<br>
-									<input type="text" name="product_item">
+									<input type="text" name="product_item" minlength="3" maxlength="50" required>
 								</label>
 							</div>
 							<div class="form-controls">
 								<label>
 									TYPE<br>
-									<input type="text" name="product_type">
+									<input type="text" name="product_type" minlength="3" maxlength="50" required>
 								</label>
 							</div>
 							<div class="form-controls">
