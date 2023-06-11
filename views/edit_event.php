@@ -46,10 +46,17 @@
 								</label>
 							</div>
 							<div class="form-controls">
-								<label>
-									ARTIST:<br>
-									<input type="number" name="event_artist" value="<?= $event["artist_id"] ?>">
-								</label>
+								<label>ARTIST:</label>
+								<select name="event_artist">
+									<option selected></option>
+<?php
+									foreach ($artists as $artist) {
+										echo "
+											<option value='".$artist["artist_id"]."'>". $artist["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 							</div>
 									<input type="hidden" name="event_id" value="<?= $event["event_id"] ?>">
 							</div>
@@ -61,7 +68,7 @@
 
 					<div class="col-md-12 col-xs-12">
 						<div class="campos campos2">
-							<button class="accao" type="submit" name="send">Save Product</button>
+							<button class="accao" type="submit" name="send">Save Event</button>
 						</div>
 					</div>
 

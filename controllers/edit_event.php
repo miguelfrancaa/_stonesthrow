@@ -1,11 +1,23 @@
- <?php
+<?php
 	require("includes/admin_controller.php");
 
 	require("models/events.php");
 
-	$model = new Events();
+	$modelEvents = new Events();
 
-	$event = $model->eventToEdit($id);
+	$event = $modelEvents->eventToEdit($id);
+
+	require("models/artists.php");
+
+	$modelArtists = new Artists();
+
+	$artists = $modelArtists->getArtists();
+
+	$artists_name = [];
+
+	foreach($artists as $artist){
+		$artists_names[] = $artist["name"];
+	}
 
 	if(isset($_POST["send"])){
 
@@ -25,7 +37,7 @@
 			mb_strlen($_POST["event_link"]) <= 255 
 			) {
 
-				$event = $model->updateEvent($_POST);
+				$event = $modelEvents->updateEvent($_POST);
 
 				header("Location: /admin_events");
 				

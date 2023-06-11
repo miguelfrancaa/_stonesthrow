@@ -80,10 +80,17 @@
 								</label>
 							</div>
 							<div class="form-controls">
-								<label>
-									ARTIST:<br>
-									<input type="number" name="new_artist" value="<?= $new["artist_id"] ?>">
-								</label>
+								<label>ARTIST:</label>
+								<select name="event_artist">
+									<option selected></option>
+<?php
+									foreach ($artists as $artist) {
+										echo "
+											<option value='".$artist["artist_id"]."'>". $artist["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 									<input type="hidden" name="new_id" value="<?= $new["new_id"] ?>">
 							</div>
 							

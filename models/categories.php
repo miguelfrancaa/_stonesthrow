@@ -49,5 +49,17 @@
 
 			return $query->fetchAll();
 		}
+
+		public function getSubcategoriesToSelect(){
+			$query = $this->db->prepare("
+			SELECT *
+			FROM categories
+			WHERE parent_id IS NOT NULL
+			");
+
+			$query->execute([]);
+
+			return $query->fetchAll();
+		}
 	}
 ?>

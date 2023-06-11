@@ -6,6 +6,18 @@
 
 	$new = $model->newToEdit($id);
 
+	require("models/artists.php");
+
+	$modelArtists = new Artists();
+
+	$artists = $modelArtists->getArtists();
+
+	$artists_name = [];
+
+	foreach($artists as $artist){
+		$artists_names[] = $artist["name"];
+	}
+
 	if(isset($_POST["send"])){
 
 		foreach($_POST as $key => $value) {

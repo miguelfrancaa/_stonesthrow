@@ -130,7 +130,7 @@
 		public function newProduct($data){
 			$query = $this->db->prepare("
 				INSERT INTO products (item, type, description, price, stock, image, tracklist, category_id, artist_id)
-				VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);
+				VALUES(?, ?, ?, ?, ?, ?, NULLIF(?, ''), ?, NULLIF(?, ''));
 				");
 
 			$query->execute([

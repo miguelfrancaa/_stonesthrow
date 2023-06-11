@@ -44,10 +44,17 @@
 								</label>
 							</div>
 							<div class="form-controls">
-								<label>
-									ARTIST_ID:<br>
-									<input type="number" name="event_artist">
-								</label>
+								<label>ARTIST:</label>
+								<select name="event_artist">
+									<option selected></option>
+<?php
+									foreach ($artists as $artist) {
+										echo "
+											<option value='".$artist["artist_id"]."'>". $artist["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 							</div>
 						</div>
 					</div>

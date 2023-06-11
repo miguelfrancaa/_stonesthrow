@@ -66,16 +66,30 @@
 								</label>
 							</div>
 							<div class="form-controls">
-								<label>
-									Category:<br>
-									<input type="number" name="product_category" value="<?= $product["category_id"] ?>">
-								</label>
+								<label>CATEGORY:</label>
+								<select name="product_category">
+									<option selected></option>
+<?php
+									foreach ($categories as $category) {
+										echo "
+											<option value='".$category["category_id"]."'>". $category["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 							</div>
 							<div class="form-controls">
-								<label>
-									Artist:<br>
-									<input type="number" name="product_artist" value="<?= $product["artist_id"] ?>">
-								</label>
+								<label>ARTIST:</label>
+								<select name="product_artist">
+									<option selected></option>
+<?php
+									foreach ($artists as $artist) {
+										echo "
+											<option value='".$artist["artist_id"]."'>". $artist["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 									<input type="hidden" name="product_id" value="<?= $product["product_id"] ?>">
 									<input type="hidden" name="photoname" value="<?= bin2hex(random_bytes(6)) ?>">
 							</div>

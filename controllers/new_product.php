@@ -5,6 +5,30 @@
 
 	$model = new Products();
 
+	require_once("models/artists.php");
+
+	$modelArtists = new Artists();
+
+	$artists = $modelArtists->getArtists();
+
+	$artists_name = [];
+
+	foreach($artists as $artist){
+		$artists_names[] = $artist["name"];
+	}
+
+	require("models/categories.php");
+
+	$modelCategories = new Categories();
+
+	$categories = $modelCategories->getSubcategoriesToSelect();
+
+	$categories_name = [];
+
+	foreach($categories as $category){
+		$categories_name[] = $category["name"];
+	}
+
 	if(isset($_POST["send"])){
 
 		foreach($_POST as $key => $value) {

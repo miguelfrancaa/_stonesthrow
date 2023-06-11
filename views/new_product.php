@@ -10,6 +10,15 @@
 		<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/styleadmin.css">
+		<script src="/js/tinymce/tinymce.min.js"></script>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", () => {
+
+				tinymce.init({
+					selector: 'textarea'
+				})
+			})
+		</script>
 	</head>
 	<body class="admin-crm inicio-page">
 		<?php require('includes/menuback.php'); ?>
@@ -62,16 +71,30 @@
 								</label>
 							</div>
 							<div class="form-controls">
-								<label>
-									CATEGORY<br>
-									<input type="number" name="product_category">
-								</label>
+								<label>CATEGORY:</label>
+								<select name="product_category">
+									<option selected></option>
+<?php
+									foreach ($categories as $category) {
+										echo "
+											<option value='".$category["category_id"]."'>". $category["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 							</div>
 							<div class="form-controls">
-								<label>
-									ARTIST<br>
-									<input type="number" name="product_artist">
-								</label>
+								<label>ARTIST:</label>
+								<select name="product_artist">
+									<option selected></option>
+<?php
+									foreach ($artists as $artist) {
+										echo "
+											<option value='".$artist["artist_id"]."'>". $artist["name"] ."</option>
+										";
+									}
+?>	
+								</select>
 							</div>
 							
 						</div>
