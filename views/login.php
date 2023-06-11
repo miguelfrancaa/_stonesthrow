@@ -34,7 +34,7 @@
 			<br><br>
 			<div class="buttonForm"><button type="submit" name="send">SIGN IN</button><a href="/register/">CREATE ACCOUNT</a></div>
 			<div><br><?php
-				if (isset($_POST["send"])) {
+				if (!empty($message)) {
 					echo $message;
 				}
 		?></div>

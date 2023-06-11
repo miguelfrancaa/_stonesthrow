@@ -20,7 +20,7 @@
 			$query = $this->db->prepare("
 			SELECT new_id, title, content, image, created_at
 			FROM news
-			ORDER BY created_at ASC
+			ORDER BY created_at DESC
 			");
 
 			$query->execute();
@@ -110,7 +110,7 @@
 		public function newNew($data){
 			$query = $this->db->prepare("
 				INSERT INTO news (title, content, content2, image, video, imageCarroussel, top, leftpx, artist_id)
-				VALUES(?, ?, ?, ?, ?, ?, NULLIF(?, ''), NULLIF(?, ''), NULLIF(?, ''));
+				VALUES(?, ?, NULLIF(?, ''), ?, NULLIF(?, ''), NULLIF(?, ''), NULLIF(?, ''), NULLIF(?, ''), NULLIF(?, ''));
 				");
 
 			$query->execute([

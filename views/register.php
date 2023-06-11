@@ -51,7 +51,7 @@
 			<input class="formInputs" type="date" name="birthdate" minlength="6" maxlength="30" required><br><br><br>
 			<div class="buttonForm"><button type="submit" name="send">CREATE ACCOUNT</button><a href="/login/">LOGIN</a>
 <?php
-		if(isset($_POST["send"])){
+		if(!empty($message)){
 		echo $message;
 		}
 ?>
