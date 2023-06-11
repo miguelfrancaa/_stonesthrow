@@ -24,25 +24,25 @@
 							<div class="form-controls">
 								<label>
 									Local:<br>
-									<input type="text" name="event_local" value="<?= $event["local"] ?>">
+									<input name="event_local" type="text" minlength="2" maxlength="32" name="event_local" value="<?= $event["local"] ?>">
 								</label>
 							</div>
 							<div class="form-controls">
 								<label>
 									DATE:<br>
-									<input type="text" name="event_date" value="<?= $event["event_date"] ?>">
+									<input type="date" name="event_date" value="<?= $event["event_date"] ?>">
 								</label>
 							</div>
 							<div class="form-controls">
 								<label>
 									MODE:<br>
-								<input type="text" name="event_mode" value="<?= $event["mode"] ?>">
+								<input type="text" name="event_mode" value="<?= $event["mode"] ?>" minlength="2" maxlength="32" >
 								</label>
 							</div>
 							<div class="form-controls">
 								<label>
 									LINK<br>
-									<input type="text" name="event_link" value="<?= $event["link"] ?>">
+									<input type="text" name="event_link" value="<?= $event["link"] ?>" minlength="5" maxlength="255">
 								</label>
 							</div>
 							<div class="form-controls">

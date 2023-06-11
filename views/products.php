@@ -24,7 +24,7 @@
 				<div class='col-md-7 col-sm-12 col-xs-12'><img class='vin john' src='/img/products/".$product["image"]."'></div>
 				<div class='col-md-5 col-sm-12 col-xs-12 vinylText relaa'>
 					<h2>".$product["item"]."<br>
-					<a href=artists.php?artist_id=".$product["artist_id"]."><span class='vinylText'>".$product["name"]."</span></h2></a>
+					<a href=/artist/".$product["artist_id"]."><span class='vinylText'>".$product["name"]."</span></h2></a>
 					<div style='font-size: 17px'>".$product["type"]."</div><br>
 					<h3 id='productDescription".$product["product_id"]."'>".substr($product["description"], 0, 400)."<span class='readMore".$product["product_id"]."'>...&nbsp &nbsp </span><span class='readMore".$product["product_id"]."' style='color:black; font-size:15px; text-decoration:underline'>Read More</span></h3><br>
 					<br>

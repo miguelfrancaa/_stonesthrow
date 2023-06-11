@@ -70,7 +70,7 @@
 							<div class="form-controls">
 								<label>
 									TOP:<br>
-									<textarea name="new_top"><?= $new["top"] ?></textarea>
+									<input type="number" value="<?= $new["top"] ?>" name="new_top">
 								</label>
 							</div>
 							<div class="form-controls">

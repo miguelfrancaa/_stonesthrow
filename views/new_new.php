@@ -31,7 +31,7 @@
 							<div class="form-controls">
 								<label>
 									TITLE<br>
-									<input type="text" name="new_title">
+									<input type="text" name="new_title" name="new_title" minlength="5" maxlength="50">
 								</label>
 							</div>
 							<div class="form-controls">

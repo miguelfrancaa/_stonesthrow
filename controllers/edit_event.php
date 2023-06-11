@@ -1,4 +1,4 @@
-<?php
+ <?php
 	require("includes/admin_controller.php");
 
 	require("models/events.php");
@@ -9,9 +9,29 @@
 
 	if(isset($_POST["send"])){
 
-		$event = $model->updateEvent($_POST);
+		foreach($_POST as $key => $value) {
+			$_POST[ $key ] = trim(htmlspecialchars(strip_tags($value)));
+		}
 
-		header("Location: /admin_events");
+		if (isset($_POST["event_local"]) &&
+			isset($_POST["event_date"]) &&
+			isset($_POST["event_mode"]) &&
+			isset($_POST["event_link"]) &&
+			mb_strlen($_POST["event_local"]) >= 3 &&
+			mb_strlen($_POST["event_local"]) <= 32 &&
+			mb_strlen($_POST["event_mode"]) >= 3 &&
+			mb_strlen($_POST["event_mode"]) <= 32 &&
+			mb_strlen($_POST["event_link"]) >= 3 &&
+			mb_strlen($_POST["event_link"]) <= 255 
+			) {
+
+				$event = $model->updateEvent($_POST);
+
+				header("Location: /admin_events");
+				
+		}else{
+			echo 'Por favor preencha os dados corretamente.';
+		}
 	}
 
 	require("views/edit_event.php");

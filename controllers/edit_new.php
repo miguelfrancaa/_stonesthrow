@@ -8,12 +8,28 @@
 
 	if(isset($_POST["send"])){
 
-		move_uploaded_file($_FILES["new_image"]["tmp_name"], "img/news/" . $_FILES["new_image"]["name"]);
-		move_uploaded_file($_FILES["new_imageCarroussel"]["tmp_name"], "img/news/" . $_FILES["new_imageCarroussel"]["name"]);
+		foreach($_POST as $key => $value) {
+			$_POST[ $key ] = trim(htmlspecialchars(strip_tags($value)));
+		}
 
-		$new = $model->updateNew($_POST);
+		if (isset($_POST["new_title"]) &&
+			isset($_POST["new_content"]) &&
+			isset($_POST["new_content2"]) &&
+			mb_strlen($_POST["new_title"]) >= 5 && 
+			mb_strlen($_POST["new_title"]) <= 50 &&
+			file_exists($_FILES['new_image']['tmp_name']) || is_uploaded_file($_FILES['new_image']['tmp_name'])) {
+			
+			move_uploaded_file($_FILES["new_image"]["tmp_name"], "img/news/" . $_FILES["new_image"]["name"]);
+			move_uploaded_file($_FILES["new_imageCarroussel"]["tmp_name"], "img/news/" . $_FILES["new_imageCarroussel"]["name"]);
 
-		header("Location: /admin_news");
+			$new = $model->updateNew($_POST);
+
+			header("Location: /admin_news");
+		}else{
+			echo "Por favor preencha os dados corretamente.";
+
+			header("Location: /edit_new/". $_POST["new_id"] ."");
+		}
 	}
 
 	require("views/edit_new.php");
