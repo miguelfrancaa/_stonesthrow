@@ -21,7 +21,9 @@
 			mb_strlen($_POST["artist_name"]) <= 50
 			) {
 
-			move_uploaded_file($_FILES["product_image"]["tmp_name"], "img/products/" . $_FILES["product_image"]["name"]);
+			move_uploaded_file($_FILES["artist_photo"]["tmp_name"], "img/artists/" . $_FILES["artist_photo"]["name"]);
+
+			move_uploaded_file($_FILES["artist_descriptionphoto"]["tmp_name"], "img/artists/" . $_FILES["artist_descriptionphoto"]["name"]);
 
 			$artist = $model->updateArtist($_POST);
 
