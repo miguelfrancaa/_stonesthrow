@@ -19,7 +19,7 @@
 			<h1>EDITAR Produto</h1>
 			<h6>Aqui pode gerir editar produtos</h6>
 
-			<form action="/edit_product/" method="post" enctype="multipart/form-data">
+			<form action="/edit_product/<?=$id?>" method="post" enctype="multipart/form-data">
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<div class="campos">

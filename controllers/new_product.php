@@ -17,6 +17,7 @@
 			isset($_POST["product_price"]) &&
 			isset($_POST["product_stock"]) &&
 			isset($_POST["product_category"]) &&
+			file_exists($_FILES['product_image']['tmp_name']) || is_uploaded_file($_FILES['product_image']['tmp_name']) &&
 			mb_strlen($_POST["product_item"]) >= 3 &&
 			mb_strlen($_POST["product_item"]) <= 50  &&
 			mb_strlen($_POST["product_type"]) >= 3 &&

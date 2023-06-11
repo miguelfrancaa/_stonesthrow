@@ -10,6 +10,15 @@
 		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/styleadmin.css">
+		<script src="/js/tinymce/tinymce.min.js"></script>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", () => {
+
+				tinymce.init({
+					selector: 'textarea'
+				})
+			})
+		</script>
 	</head>
 	<body class="admin-crm inicio-page">
 		<?php 
