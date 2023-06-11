@@ -76,5 +76,37 @@
 				
 			]);
 		}
+
+		public function artistToEdit($id){
+			$query = $this->db->prepare("
+				SELECT *
+				FROM artists
+				WHERE artist_id = ?
+				");
+
+			$query->execute([$id]);
+
+			return $query->fetch();
+		}
+
+		public function updateArtist($data){
+
+			$query = $this->db->prepare("
+				UPDATE artists
+				SET name = ?,
+					description = ?,
+					photo = ?,
+					description_photo = ?
+				WHERE artist_id = ?
+				");
+
+			$query->execute([
+				$data["artist_name"],
+				$data["artist_description"],
+				$_FILES["artist_photo"]["name"],
+				$_FILES["artist_descriptionphoto"]["name"],
+				$data["artist_id"]
+			]);
+		}
 }
 ?>

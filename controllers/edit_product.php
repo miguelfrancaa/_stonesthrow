@@ -50,7 +50,8 @@
 			mb_strlen($_POST["product_type"]) <= 50 &&
 			mb_strlen($_POST["product_price"]) > 0) {
 
-			move_uploaded_file($_FILES["product_image"]["tmp_name"], "img/products/" . $_FILES["product_image"]["name"]);
+			move_uploaded_file($_FILES["artist_photo"]["tmp_name"], "img/products/" . $_FILES["artist_photo"]["name"]);
+			move_uploaded_file($_FILES["artist_description_photo"]["tmp_name"], "img/products/" . $_FILES["artist_description_photo"]["name"]);
 
 			$product = $model->updateProduct($_POST);
 

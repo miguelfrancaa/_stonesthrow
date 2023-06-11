@@ -16,7 +16,7 @@
     , "delete_artist", "delete_event", "delete_new"
     , "delete_product", "delete_user", "delete_video"
     , "edit_event", "edit_new", "edit_product"
-    , "edit_video", "events", "home", "login"
+    , "edit_video", "edit_artist", "events", "home", "login"
     , "logout", "new_admin", "new_artist", "new_event"
     , "new_new", "new_product", "new_video", "newcontent"
     , "news", "productdetails", "products"
