@@ -36,10 +36,10 @@
 	$resource_id = $url_parts[3];
 	}
 
-	if( !in_array($controller, $allowed_controllers) ) {
+	 if( !in_array($controller, $allowed_controllers) ) {
     http_response_code(404);
     die("NOT FOUND!");
-}
+} 
 
 
 	require("controllers/" . $controller . ".php");

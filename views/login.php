@@ -49,7 +49,7 @@
 		<h1 class="formTitle">ACCOUNT</h1><br>
 		<form method="post" action="/logout/">
 			<div>JÀ ESTA LOGADO</div><br><br>
-			<div class="buttonForm"><button type="submit" name="send">LOGOUT</button></div>
+			<div class="buttonForm"><button type="submit" name="send">LOGOUT</button></div><br><br>
 		</form>
 		</div>
 		</div>
@@ -57,14 +57,6 @@
 }
 ?>
 	</main>
-
-	
-
-	<script>
-		if ( window.history.replaceState ) {
-		  window.history.replaceState( null, null, window.location.href );
-		}
-	</script>
 	<script src="/js/jquery-3.6.0.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/script.js"></script>

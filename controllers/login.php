@@ -35,6 +35,8 @@
 	}else{
 		$message = 'Captcha text is not correct.';
 	}
+}else{
+	$message='';
 }
 	
 

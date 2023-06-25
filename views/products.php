@@ -26,7 +26,7 @@
 					<h2>".$product["item"]."<br>
 					<a href=/artist/".$product["artist_id"]."><span class='vinylText'>".$product["name"]."</span></h2></a>
 					<div style='font-size: 17px'>".$product["type"]."</div><br>
-					<h3 id='productDescription".$product["product_id"]."'>".substr($product["description"], 0, 400)."<span class='readMore".$product["product_id"]."'>...&nbsp &nbsp </span><span class='readMore".$product["product_id"]."' style='color:black; font-size:15px; text-decoration:underline'>Read More</span></h3><br>
+					<h3 id='productDescription".$product["product_id"]."'>".substr($product["description"], 0, 400)."<span class='readMore".$product["product_id"]."'>...&nbsp &nbsp </span><span class='readMore".$product["product_id"]."' style='color:black; font-size:13px; text-decoration:underline'><br>Read More</span></h3><br>
 					<br>
 						<button class='price price1'>$".$product["price"]."</button>
 				</div>
@@ -52,7 +52,7 @@
 
 			let characters".$product["product_id"]." = $('#productDescription".$product["product_id"]."').text().length;
 
-			if(characters".$product["product_id"]." < 10000){
+			if(characters".$product["product_id"]." < 400){
 				$('.readMore".$product["product_id"]."').css('display', 'none');
 			}
 
