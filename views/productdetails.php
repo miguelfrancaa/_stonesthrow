@@ -93,7 +93,7 @@ span.spinner > .add:hover {
 							<button class="pricepd" type="submit" name="send">BUY</button>
 <?php
 }else{
-	echo "Produto Esgotado";
+	echo "Sold Out";
 }
 ?>
 					</form>

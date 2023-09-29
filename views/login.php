@@ -48,7 +48,7 @@
 		<div class="logFormsLogin">
 		<h1 class="formTitle">ACCOUNT</h1><br>
 		<form method="post" action="/logout/">
-			<div>JÀ ESTA LOGADO</div><br><br>
+			<div>YOU ALREADY LOGGED IN.</div><br><br>
 			<div class="buttonForm"><button type="submit" name="send">LOGOUT</button></div><br><br>
 		</form>
 		</div>

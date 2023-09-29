@@ -149,7 +149,7 @@
 		</div>
 <?php
 	}else{
-		echo "<p style='top: 50%; left: 50%; transform:translate(-50%, -50%); position: absolute; font-size: 30px;'>Carrinho Vazio</p>";
+		echo "<p style='top: 50%; left: 50%; transform:translate(-50%, -50%); position: absolute; font-size: 30px;'>Empty Cart</p>";
 	}
 ?>
 	</main>

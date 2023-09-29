@@ -90,7 +90,7 @@
 
 <!-- Slide 4 -->
 <div class="item">
-<div class="newBack" style="background-image: url('img/news/<?= $news[3]["imageCarroussel"] ?>');">
+<div class="newBack" style="background-image: url('/img/news/<?= $news[3]["imageCarroussel"] ?>');">
 	<div class="newText disappear" style="top: <?= $news[3]["top"] ?>%; left: <?= $news[3]["leftpx"] ?>px; position: absolute;">
 		<h2 class="newTitle">
 			<a href="
@@ -121,10 +121,6 @@
 
 </div>
 </main>
-
-	<?php
-		require("includes/footer.php")
-	?>
 
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
